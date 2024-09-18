@@ -11,12 +11,18 @@ export default {
         "secondary_bg_color": "var(--tg-theme-secondary-bg-color, #FAFAFA)",
         "text_color": "var(--tg-theme-text-color, #000000)",
         "blue_color": "#007AFF",
+      },
+      fontFamily: {
+        'gilroy': ['Gilroy', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+      },
+      fontWeight: {
+        'light': 300,
+        'regular': 400,
+        'medium': 500,
+        'bold': 600,
+        'semibold': 700,
       }
-    },
-    fontFamily: {
-      'inter': ['Gilroy', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
 }
-
