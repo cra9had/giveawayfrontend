@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/cup.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/papers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/prize.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726678407522</updated>
-      <workItem from="1726678408893" duration="2792000" />
+      <workItem from="1726678408893" duration="3367000" />
     </task>
     <servers />
   </component>
