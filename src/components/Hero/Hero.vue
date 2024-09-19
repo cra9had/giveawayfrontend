@@ -12,6 +12,7 @@ import search from "@/assets/icons/search.svg";
 const props = defineProps({
   title: String,
   description: String,
+  secondDescription: String,
   is_error: Boolean,
   image: {
     type: String,
@@ -47,8 +48,20 @@ const selectedImage = computed(() => images[props.image]);
             ? 'text-[#737E87]'
             : 'text-[#B0B3C5]',
         ]"
+        v-html="description"
       >
-        {{ description }}
+
+      </p>  <p
+        v-if="secondDescription"
+        :class="[
+          'text-[16px] leading-[19px] font-medium font-gilroy',
+          userStore.colorScheme === 'light'
+            ? 'text-[#737E87]'
+            : 'text-[#B0B3C5]',
+        ]"
+        v-html="secondDescription"
+      >
+
       </p>
     </div>
   </div>

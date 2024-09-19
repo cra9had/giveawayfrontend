@@ -13,6 +13,11 @@ export default createRouter({
       component: () => import("./views/Index/Index.vue"),
       name: "FIRST",
     },
+    {
+      path: "/ticket",
+      component: () => import("./views/Ticket/Ticket.vue"),
+      name: "TICKET",
+    },
 
     {
       path: "/:catchAll(.*)",

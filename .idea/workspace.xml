@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Hero/AboutDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Ticket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Verification/Index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -58,7 +66,7 @@
       <updated>1726678407522</updated>
       <workItem from="1726678408893" duration="3367000" />
       <workItem from="1726719294799" duration="3692000" />
-      <workItem from="1726729194415" duration="6256000" />
+      <workItem from="1726729194415" duration="7881000" />
     </task>
     <servers />
   </component>
