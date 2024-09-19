@@ -90,3 +90,19 @@ html {
   overflow: hidden;
   transition: none;
 }
+
+/* transition  top*/
+
+.slide-top-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-top-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.5, 1);
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
