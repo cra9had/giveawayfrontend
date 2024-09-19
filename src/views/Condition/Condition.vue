@@ -22,7 +22,7 @@
       <ConditionCard
         title="Подтвердил номер телефона"
         :image="
-          userStore.colorScheme === 'light' ? 'light_phone' : 'dark_phone'
+          !userStore.colorScheme === 'light' ? 'light_phone' : 'dark_phone'
         "
         :isDisable="false"
       />
