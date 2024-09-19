@@ -1,29 +1,46 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        "bg_color": "var(--tg-theme-bg-color, #FFFFFF)",
-        "secondary_bg_color": "var(--tg-theme-secondary-bg-color, #FAFAFA)",
-        "text_color": "var(--tg-theme-text-color, #000000)",
-        "blue_color": "#007AFF",
-        "orange_color": "#F45A0E",
+        bg_color: "var(--tg-theme-bg-color, #FFFFFF)",
+        secondary_bg_color: "var(--tg-theme-secondary-bg-color, #FAFAFA)",
+        text_color: "var(--tg-theme-text-color, #000000)",
+        blue_color: "#007AFF",
+        orange_color: "#F45A0E",
+        primary_dark_color: "#1B1C37",
+        primary_white_color: "#EFF0FF",
+        text_light_color: "#B0B3C5",
+        text_dark_color: "#737E87",
       },
       fontFamily: {
-        'gilroy': ['Gilroy', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+        gilroy: [
+          "Gilroy",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
       },
       fontWeight: {
-        'light': 300,
-        'regular': 400,
-        'medium': 500,
-        'bold': 600,
-        'semibold': 700,
-      }
+        light: 300,
+        regular: 400,
+        medium: 500,
+        bold: 600,
+        semibold: 700,
+      },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
-}
+  plugins: [require("@tailwindcss/line-clamp")],
+};
