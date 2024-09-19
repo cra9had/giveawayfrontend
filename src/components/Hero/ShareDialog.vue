@@ -98,7 +98,7 @@
         ]"
        >
          <div class="grid grid-cols-2 gap-2">
-           <div class="flex flex-col">
+           <div class="flex flex-col gap-2">
              <p
                  :class="[
                 'text-[14px] leading-[16px] font-bold font-gilroy',
@@ -120,7 +120,7 @@
                Перешло по ссылке
              </p>
            </div>
-           <div class="flex flex-col">
+           <div class="flex flex-col gap-2">
              <p
                  :class="[
                 'text-[14px] leading-[16px] font-bold font-gilroy',
