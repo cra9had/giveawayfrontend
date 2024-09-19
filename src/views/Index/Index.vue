@@ -66,7 +66,7 @@ onUnmounted(() => {
         <div v-if="isOpen"
              class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
              @click="closeDialog">
-          <ShareDialog />
+          <ShareDialog @close="isOpen = false" />
         </div>
       </transition>
     </Teleport>

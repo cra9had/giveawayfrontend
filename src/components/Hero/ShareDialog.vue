@@ -9,7 +9,7 @@
     class="p-2 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
   >
     <div class="m-l-auto flex flex-col justify-start gap-2 items-start">
-      <div class="reject font-gilroy text-[14px] font-normal text-orange_color">
+      <div @click="closeDialog" class="reject cursor-pointer font-gilroy text-[14px] font-normal text-orange_color">
         Отмена
       </div>
       <div
@@ -48,8 +48,12 @@
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
-
 const userStore = useUserStore();
+const emit = defineEmits(['close']);
+
+const closeDialog = () => {
+  emit('close');
+}
 </script>
 
 <style></style>
