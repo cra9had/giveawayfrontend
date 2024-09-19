@@ -17,6 +17,14 @@ export default createRouter({
       path: "/ticket",
       component: () => import("./views/Ticket/Ticket.vue"),
       name: "TICKET",
+    },  {
+      path: "/checking",
+      component: () => import("./views/Checking/Checking.vue"),
+      name: "CHECKING",
+    }, {
+      path: "/condition",
+      component: () => import("./views/Condition/Condition.vue"),
+      name: "condition",
     },
 
     {

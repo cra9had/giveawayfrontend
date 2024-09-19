@@ -1,28 +1,28 @@
 <template>
   <div
-      :class="[
+    :class="[
       ' max-w-[600px] font-medium font-gilroy',
       userStore.colorScheme === 'light'
         ? 'bg-primary_white_color'
         : 'bg-primary_dark_color',
     ]"
-      class="p-3 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
+    class="p-3 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
   >
     <div class="m-l-auto flex flex-col justify-start gap-4 items-start">
       <div
-          @click="closeDialog"
-          class="reject cursor-pointer font-gilroy text-[14px] font-normal text-orange_color"
+        @click="closeDialog"
+        class="reject cursor-pointer font-gilroy text-[14px] font-normal text-orange_color"
       >
         Отмена
       </div>
       <div
-          class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
-          :class="[
+        class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
+        :class="[
           userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
         ]"
       >
         <p
-            :class="[
+          :class="[
             'text-[14px] leading-[16px] font-bold font-gilroy',
             userStore.colorScheme === 'light'
               ? 'text-primary_dark_color'
@@ -31,23 +31,22 @@
         >
           Описание
         </p>
-     <p
-            :class="[
+        <p
+          :class="[
             'text-[14px] leading-[16px] font-bold font-gilroy',
             userStore.colorScheme === 'light'
               ? 'text-primary_dark_color'
               : 'text-[#fff]',
           ]"
         >
-       .....
+          .....
         </p>
-
       </div>
       <main
-          class="m-l-auto flex flex-col justify-start gap-2 items-start w-full"
+        class="m-l-auto flex flex-col justify-start gap-2 items-start w-full"
       >
         <p
-            :class="[
+          :class="[
             ' text-[18px] font-normal font-gilroy',
             userStore.colorScheme === 'light'
               ? 'text-primary_dark_color'
@@ -57,53 +56,47 @@
           Параметры розыгрыша
         </p>
         <div
-            class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-2"
-            :class="[
+          class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-2"
+          :class="[
             userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
           ]"
         >
-        <div class="parameters flex items-center gap-1"  v-for="parameter  in parameters" :key="parameter">
-          <div class="circle w-[6px] h-[6px] bg-orange_color rounded-full"></div>
-          <p
+          <div
+            class="parameters flex items-center gap-1"
+            v-for="parameter in parameters"
+            :key="parameter"
+          >
+            <div
+              class="circle w-[6px] h-[6px] bg-orange_color rounded-full"
+            ></div>
+            <p
               :class="[
-            'text-[14px] leading-[16px] font-medium font-gilroy',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-          ]"
+                'text-[14px] leading-[16px] font-medium font-gilroy',
+                userStore.colorScheme === 'light'
+                  ? 'text-primary_dark_color'
+                  : 'text-[#fff]',
+              ]"
               v-html="parameter"
-         />
-
-        </div>
+            />
+          </div>
         </div>
       </main>
-
     </div>
   </div>
 </template>
 
-
 <script setup>
 import { ref } from "vue";
 import { useUserStore } from "@/stores/useUserStore.js";
-
 const userStore = useUserStore();
 const emit = defineEmits(["close"]);
-
 const closeDialog = () => {
   emit("close");
 };
-
 const parameters = ref([
-  'Участников: 1',
-  'Призовых мест: 1',
-  'Дата розыгрыша: <b>03.09.2024, 20:22 </b>',
+  "Участников: 1",
+  "Призовых мест: 1",
+  "Дата розыгрыша: <b>03.09.2024, 20:22 </b>",
 ]);
 </script>
-<style>
-.copy-input {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-</style>
+<style></style>

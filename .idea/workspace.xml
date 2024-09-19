@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Hero/AboutDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/dark_money.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/dark_phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/dark_telegram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/light_money.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/light_phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/light_telegram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/smCheck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/condition/smUncheck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/light_paper.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/light_search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Condition/ConditionCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Checking/Checking.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Condition/Condition.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/papers.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/dark_paper.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/dark_search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonRoute.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonRoute.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/AboutDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/AboutDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Ticket.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Verification/Index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +67,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\freelancing\loto_club\src\assets\icons\condition" />
+      <recent name="D:\projects\freelancing\loto_club\src\views\Condition" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,7 +83,7 @@
       <updated>1726678407522</updated>
       <workItem from="1726678408893" duration="3367000" />
       <workItem from="1726719294799" duration="3692000" />
-      <workItem from="1726729194415" duration="8228000" />
+      <workItem from="1726729194415" duration="11991000" />
     </task>
     <servers />
   </component>
@@ -84,6 +101,12 @@
           <url>file://$PROJECT_DIR$/src/views/Index/Index.vue</url>
           <line>58</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/Condition/Condition.vue</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

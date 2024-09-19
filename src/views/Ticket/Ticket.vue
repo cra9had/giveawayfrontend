@@ -11,79 +11,89 @@ import AboutDialog from "@/components/Hero/AboutDialog.vue";
 const isOpen = ref(false);
 const inviteModal = ref(false);
 
-
-
 const openDialog = () => {
   isOpen.value = true;
-};const inviteUser = () => {
+};
+const inviteUser = () => {
   inviteModal.value = true;
 };
 
 const closeDialog = (event) => {
-  if (event.target.classList.contains('modal-overlay')) {
+  if (event.target.classList.contains("modal-overlay")) {
     isOpen.value = false;
     inviteModal.value = false;
   }
 };
 
 const handleKeyDown = (event) => {
-  if (event.key === 'Escape') {
+  if (event.key === "Escape") {
     isOpen.value = false;
     inviteModal.value = false;
   }
 };
 
 onMounted(() => {
-  document.addEventListener('keydown', handleKeyDown);
+  document.addEventListener("keydown", handleKeyDown);
 });
 
 onUnmounted(() => {
-  document.removeEventListener('keydown', handleKeyDown);
+  document.removeEventListener("keydown", handleKeyDown);
 });
 </script>
 
 <template>
   <main class="h-dvh p-4 flex flex-col gap-5">
     <Hero
-        title="Вы получили билет «1hl9r3»"
-        image="check"
-        description="Теперь вы участвуйте в розыгрыше: </br> <strong>Розыгрыш </strong>"
-        secondDescription="Не отписывайтесь от каналов до окончания розыгрыша! "
+      title="Вы получили билет «1hl9r3»"
+      image="check"
+      description="Теперь вы участвуйте в розыгрыше: </br> <strong>Розыгрыш </strong>"
+      secondDescription="Не отписывайтесь от каналов до окончания розыгрыша! "
     />
     <Counter time="06:01:52" text="До завершения" />
-    <Button  @click="inviteUser"     colorScheme="light" title="Подробнее о розыгрыше" />
+    <router-link to="/condition" style="color: cornflowerblue"
+      >Выполнение условий</router-link
+    >    <router-link to="/checking" style="color: cornflowerblue"
+      >Проверка</router-link
+    >
+    <Button
+      @click="inviteUser"
+      colorScheme="light"
+      title="Подробнее о розыгрыше"
+    />
     <div class="tickets flex flex-col justify-center gap-1">
       <Ticket
-
-     @click="openDialog"
-          image="user"
-          title="Пригласить друзей"
-          description="<p> Получи дополнительный билет, пригласив друзей! </p>"
+        @click="openDialog"
+        image="user"
+        title="Пригласить друзей"
+        description="<p> Получи дополнительный билет, пригласив друзей! </p>"
       />
       <Ticket
-          image="ticket"
-          title="Билет: 1HL9R3"
-          description="<p> Получен: <strong>03.09.2021, 14:20 </strong> </p>"
+        image="ticket"
+        title="Билет: 1HL9R3"
+        description="<p> Получен: <strong>03.09.2021, 14:20 </strong> </p>"
       />
     </div>
   </main>
   <Teleport to="body">
     <transition name="slide-top">
-      <div v-if="inviteModal"
-           class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
-           @click="closeDialog">
+      <div
+        v-if="inviteModal"
+        class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
+        @click="closeDialog"
+      >
         <AboutDialog @close="inviteModal = false" />
       </div>
     </transition>
     <transition name="slide-top">
-      <div v-if="isOpen"
-           class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
-           @click="closeDialog">
+      <div
+        v-if="isOpen"
+        class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
+        @click="closeDialog"
+      >
         <ShareDialog @close="isOpen = false" />
       </div>
     </transition>
   </Teleport>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

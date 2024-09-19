@@ -5,9 +5,11 @@ import {computed} from "vue";
 import check from "@/assets/icons/check.svg";
 import cup from "@/assets/icons/cup.svg";
 import error from "@/assets/icons/error.svg";
-import papers from "@/assets/icons/papers.svg";
+import dark_paper from "@/assets/icons/dark_paper.svg";
+import light_paper from "@/assets/icons/light_paper.svg";
 import prize from "@/assets/icons/prize.svg";
-import search from "@/assets/icons/search.svg";
+import dark_search from "@/assets/icons/dark_search.svg";
+import light_search from "@/assets/icons/light_search.svg";
 
 const props = defineProps({
   title: String,
@@ -23,9 +25,11 @@ const images = {
  check,
   cup,
   error,
-  papers,
+  light_paper,
+  dark_paper,
   prize,
-  search
+  dark_search,
+  light_search,
 };
 
 const selectedImage = computed(() => images[props.image]);
