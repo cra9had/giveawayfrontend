@@ -6,7 +6,7 @@
         ? 'bg-primary_white_color'
         : 'bg-primary_dark_color',
     ]"
-    class="p-2 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
+    class="p-3 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
   >
     <div class="m-l-auto flex flex-col justify-start gap-4 items-start">
       <div
