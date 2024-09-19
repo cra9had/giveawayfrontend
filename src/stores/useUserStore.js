@@ -28,12 +28,14 @@ export const useUserStore = defineStore("userStore", () => {
 
   const switchToLight = () => {
     webapp.setHeaderColor("#EFF0FF");
+    webapp.bottomBarColor("#FFFFFF");
     document.body.style.backgroundColor = "#EFF0FF";
     document.body.style.color = "#1B1C37";
   };
 
   const switchToDark = () => {
     webapp.setHeaderColor("#1B1C37");
+    webapp.bottomBarColor("#262744");
     document.body.style.backgroundColor = "#1B1C37";
     document.body.style.color = "#FFFFFF";
   };

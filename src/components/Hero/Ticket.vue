@@ -1,7 +1,7 @@
 <template>
   <div
       :class="[
-      'flex items-center p-2 rounded-[4px]',
+      'flex items-center p-2 rounded-[4px] cursor-pointer',
       userStore.colorScheme === 'light'
         ? 'bg-white'
         : 'bg-[#32334B]',
