@@ -42,12 +42,41 @@
           дополнительный билет для розыгрыша.
         </p>
       </div>
+      <p
+          :class="[
+      ' text-[18px] font-normal font-gilroy',
+      userStore.colorScheme === 'light'
+        ? 'text-primary_dark_color'
+        : 'text-text_light_color',
+    ]"
+      >
+        Ваша реферальная ссылка:
+      </p>
+      <div
+          class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-2"
+          :class="[
+          userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
+        ]"
+      >
+
+        <input type="text" value="https://t.me/LotoClubBot/app?startapp=L2cb4c0" readonly class="copy-input p-2 font-medium font-gilroy   outline-none rounded-[6px] h-[50px]"
+               :class="[
+          userStore.colorScheme === 'light' ? 'bg-[#D0D9FA] text-primary_dark_color' : 'bg-primary_dark_color text-[#fff]',
+        ]"
+        >
+<div class="grid grid-cols-2 gap-2">
+
+  <Button colorScheme="orange" title="Скопировать" />
+  <Button colorScheme="orange" title="Поделиться" />
+</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
+import Button from "@/components/Button/Button.vue";
 const userStore = useUserStore();
 const emit = defineEmits(['close']);
 
@@ -56,4 +85,10 @@ const closeDialog = () => {
 }
 </script>
 
-<style></style>
+<style>
+.copy-input {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+</style>

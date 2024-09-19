@@ -18,6 +18,7 @@ export default {
         gilroy: [
           "Gilroy",
           "ui-sans-serif",
+          "ui-sans-serif",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
