@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Counter/Counter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/hero/ticket.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/hero/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Hero/Ticket.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +59,22 @@
       <option name="presentableId" value="Default" />
       <updated>1726678407522</updated>
       <workItem from="1726678408893" duration="3367000" />
-      <workItem from="1726719294799" duration="1118000" />
+      <workItem from="1726719294799" duration="3692000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Hero/Ticket.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
