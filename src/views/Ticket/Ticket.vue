@@ -9,22 +9,27 @@ import ShareDialog from "@/components/Hero/ShareDialog.vue";
 import AboutDialog from "@/components/Hero/AboutDialog.vue";
 
 const isOpen = ref(false);
+const inviteModal = ref(false);
 
 
 
 const openDialog = () => {
   isOpen.value = true;
+};const inviteUser = () => {
+  inviteModal.value = true;
 };
 
 const closeDialog = (event) => {
   if (event.target.classList.contains('modal-overlay')) {
     isOpen.value = false;
+    inviteModal.value = false;
   }
 };
 
 const handleKeyDown = (event) => {
   if (event.key === 'Escape') {
     isOpen.value = false;
+    inviteModal.value = false;
   }
 };
 
@@ -46,10 +51,11 @@ onUnmounted(() => {
         secondDescription="Не отписывайтесь от каналов до окончания розыгрыша! "
     />
     <Counter time="06:01:52" text="До завершения" />
-    <Button colorScheme="light" title="Подробнее о розыгрыше" />
+    <Button  @click="inviteUser"     colorScheme="light" title="Подробнее о розыгрыше" />
     <div class="tickets flex flex-col justify-center gap-1">
       <Ticket
-          @click="openDialog"
+
+     @click="openDialog"
           image="user"
           title="Пригласить друзей"
           description="<p> Получи дополнительный билет, пригласив друзей! </p>"
@@ -63,10 +69,17 @@ onUnmounted(() => {
   </main>
   <Teleport to="body">
     <transition name="slide-top">
+      <div v-if="inviteModal"
+           class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
+           @click="closeDialog">
+        <AboutDialog @close="inviteModal = false" />
+      </div>
+    </transition>
+    <transition name="slide-top">
       <div v-if="isOpen"
            class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
            @click="closeDialog">
-        <AboutDialog @close="isOpen = false" />
+        <ShareDialog @close="isOpen = false" />
       </div>
     </transition>
   </Teleport>
