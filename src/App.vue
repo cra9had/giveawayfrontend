@@ -7,6 +7,8 @@ onMounted(() => {
     passive: false,
   });
   webapp.ready();
+  webapp.MainButton.hide();
+  webapp.BackButton.hide();
 });
 </script>
 
