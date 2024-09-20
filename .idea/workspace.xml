@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/views/404/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/404/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Checking/Checking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Checking/Checking.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Condition/Condition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Condition/Condition.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Progress/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Progress/Progress.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners.vue" afterDir="false" />
@@ -78,7 +77,7 @@
       <workItem from="1726719294799" duration="3692000" />
       <workItem from="1726729194415" duration="12615000" />
       <workItem from="1726803822310" duration="9795000" />
-      <workItem from="1726821320256" duration="8060000" />
+      <workItem from="1726821320256" duration="8302000" />
     </task>
     <servers />
   </component>

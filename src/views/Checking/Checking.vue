@@ -20,6 +20,9 @@ const webapp = window.Telegram.WebApp;
 
 onMounted(() => {
   webapp.BackButton.show();
+  webapp.BackButton.onClick(() => {
+    router.go(-1);
+  });
 });
 </script>
 
