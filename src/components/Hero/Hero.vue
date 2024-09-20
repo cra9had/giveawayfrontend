@@ -1,9 +1,10 @@
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
 const userStore = useUserStore();
-import {computed} from "vue";
+import { computed } from "vue";
 import check from "@/assets/icons/check.svg";
-import cup from "@/assets/icons/cup.svg";
+import dark_cup from "@/assets/icons/dark_cup.svg";
+import light_cup from "@/assets/icons/light_cup.svg";
 import error from "@/assets/icons/error.svg";
 import dark_paper from "@/assets/icons/dark_paper.svg";
 import light_paper from "@/assets/icons/light_paper.svg";
@@ -22,8 +23,9 @@ const props = defineProps({
   },
 });
 const images = {
- check,
-  cup,
+  check,
+  dark_cup,
+  light_cup,
   error,
   light_paper,
   dark_paper,
@@ -40,7 +42,13 @@ const selectedImage = computed(() => images[props.image]);
     <div class="flex flex-col items-center text-center gap-2">
       <!-- <DuckError v-if="is_error" />
       <Duck v-if="!is_error && lottie" :name="lottie" /> -->
-      <img draggable="false" class="mb-2 select-none" v-if="image" :src="selectedImage" alt="">
+      <img
+        draggable="false"
+        class="mb-2 select-none"
+        v-if="image"
+        :src="selectedImage"
+        alt=""
+      />
       <h1 v-if="title" class="font-gilroy font-bold text-[20px] leading-[24px]">
         {{ title }}
       </h1>
@@ -53,9 +61,8 @@ const selectedImage = computed(() => images[props.image]);
             : 'text-[#B0B3C5]',
         ]"
         v-html="description"
-      >
-
-      </p>  <p
+      ></p>
+      <p
         v-if="secondDescription"
         :class="[
           'text-[16px] leading-[19px] font-medium font-gilroy',
@@ -64,9 +71,7 @@ const selectedImage = computed(() => images[props.image]);
             : 'text-[#B0B3C5]',
         ]"
         v-html="secondDescription"
-      >
-
-      </p>
+      ></p>
     </div>
   </div>
 </template>

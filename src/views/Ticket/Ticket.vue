@@ -59,6 +59,9 @@ onUnmounted(() => {
     <router-link to="/todo-condition" style="color: cornflowerblue"
       >Условия не выполнены 1</router-link
     >
+    <router-link to="/winners" style="color: cornflowerblue"
+      >Победа1</router-link
+    >
     <Button
       @click="inviteUser"
       colorScheme="light"
