@@ -1,44 +1,46 @@
 <template>
   <div class="flex flex-col h-full">
-  <div class="flex flex-col gap-2">
-    <Hero
+    <div class="flex p-4 flex-col gap-2">
+      <Hero
         title="Вы не выполнили условия розыгрыша!"
         image="error"
         description="Для розыгрыша выполните все условия"
-    />
-    <Counter time="06:01:52" text="До завершения" class="" />
-    <Button colorScheme="light" title="Подробнее о розыгрыше" />
-    <div class="conditions flex flex-col gap-2 mt-4">
-      <ToDoConditionCard
+      />
+      <Counter time="06:01:52" text="До завершения" class="" />
+      <Button colorScheme="light" title="Подробнее о розыгрыше" />
+      <div class="conditions flex flex-col gap-2 mt-4">
+        <ToDoConditionCard
           title="Ставки на сумму 1000 тенге в игре Lemon"
           :image="
-          userStore.colorScheme === 'light' ? 'light_money' : 'dark_money'
-        "
+            userStore.colorScheme === 'light' ? 'light_money' : 'dark_money'
+          "
           :isDisable="false"
           badgeText="Выполнить"
-      />
-      <ToDoConditionCard
+        />
+        <ToDoConditionCard
           title="Подписка вашего друга в телеграм канале"
           :image="
-          userStore.colorScheme === 'light' ? 'light_telegram' : 'dark_telegram'
-        "
+            userStore.colorScheme === 'light'
+              ? 'light_telegram'
+              : 'dark_telegram'
+          "
           :isDisable="true"
           badgeText="Выполнить"
-      />
-      <ToDoConditionCard
+        />
+        <ToDoConditionCard
           title="Подтвердил номер телефона"
           :image="
-          userStore.colorScheme === 'light' ? 'light_phone' : 'dark_phone'
-        "
+            userStore.colorScheme === 'light' ? 'light_phone' : 'dark_phone'
+          "
           :isDisable="false"
           badgeText="Выполнить"
-      />
-    </div>
-    <div class="grid grid-cols-1 gap-2 mt-3">
-      <Button colorScheme="orange" title="Проверить условия" />
+        />
+      </div>
+      <div class="grid grid-cols-1 gap-2 mt-3">
+        <Button colorScheme="orange" title="Проверить условия" />
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script setup>
@@ -74,6 +76,5 @@ onMounted(() => {
   });
 });
 </script>
-
 
 <style scoped></style>

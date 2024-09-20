@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <transition name="fade" appear>
-    <div class="flex flex-col justify-center items-center h-dvh ">
+    <div class="flex p-4 flex-col justify-center items-center h-dvh ">
    {{title}}
     </div>
   </transition>
