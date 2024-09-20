@@ -32,7 +32,10 @@ const handleKeyDown = (event) => {
   }
 };
 
+const webapp = window.Telegram.WebApp;
+
 onMounted(() => {
+  webapp.BackButton.show();
   document.addEventListener("keydown", handleKeyDown);
 });
 

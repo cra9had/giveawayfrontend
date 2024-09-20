@@ -1,5 +1,7 @@
 <script setup>
-import Hero from "../../components/Hero/Hero.vue";
+
+import {onMounted} from "vue";
+
 defineProps({
   title:{
     required: false,
@@ -12,6 +14,11 @@ defineProps({
     type: String,
   }
 })
+const webapp = window.Telegram.WebApp;
+
+onMounted(() => {
+  webapp.BackButton.show();
+});
 </script>
 
 <template>

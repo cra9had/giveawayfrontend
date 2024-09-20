@@ -308,7 +308,7 @@
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
-import { ref } from "vue";
+import {onMounted, ref} from "vue";
 const userStore = useUserStore();
 const parameters = ref([
   "Участников: 1",
@@ -317,6 +317,12 @@ const parameters = ref([
 ]);
 import image from "@/assets/icons/user.svg";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
+
+const webapp = window.Telegram.WebApp;
+
+onMounted(() => {
+  webapp.BackButton.show();
+});
 </script>
 
 <style scoped></style>

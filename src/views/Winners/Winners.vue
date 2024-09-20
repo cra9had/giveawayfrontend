@@ -27,8 +27,10 @@ const handleKeyDown = (event) => {
     isOpen.value = false;
   }
 };
+const webapp = window.Telegram.WebApp;
 
 onMounted(() => {
+  webapp.BackButton.show();
   document.addEventListener("keydown", handleKeyDown);
 });
 

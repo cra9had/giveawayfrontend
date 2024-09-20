@@ -43,8 +43,14 @@ import { useUserStore } from "@/stores/useUserStore.js";
 import ConditionCard from "@/components/Condition/ConditionCard.vue";
 import Button from "@/components/Button/Button.vue";
 import ButtonRoute from "@/components/Button/ButtonRoute.vue";
+import {onMounted} from "vue";
 
 const userStore = useUserStore();
+const webapp = window.Telegram.WebApp;
+
+onMounted(() => {
+  webapp.BackButton.show();
+});
 </script>
 
 <style scoped></style>

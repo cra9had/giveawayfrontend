@@ -9,7 +9,6 @@ import ShareDialog from "@/components/Hero/ShareDialog.vue";
 
 const isOpen = ref(false);
 
-const webapp = window.Telegram.WebApp;
 
 const openDialog = () => {
   isOpen.value = true;
@@ -26,6 +25,7 @@ const handleKeyDown = (event) => {
     isOpen.value = false;
   }
 };
+const webapp = window.Telegram.WebApp;
 
 onMounted(() => {
   document.addEventListener("keydown", handleKeyDown);

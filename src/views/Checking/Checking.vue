@@ -13,8 +13,14 @@
 <script setup>
 import Hero from "@/components/Hero/Hero.vue";
 import { useUserStore } from "@/stores/useUserStore.js";
+import {onMounted} from "vue";
 
 const userStore = useUserStore();
+const webapp = window.Telegram.WebApp;
+
+onMounted(() => {
+  webapp.BackButton.show();
+});
 </script>
 
 <style scoped></style>
