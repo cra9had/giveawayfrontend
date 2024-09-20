@@ -42,7 +42,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="h-dvh p-4 flex flex-col gap-5">
+  <main class="h-dvh  flex flex-col gap-5">
     <Hero
       title="Вы получили билет «1hl9r3»"
       image="check"

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 flex flex-col gap-4">
+  <div class="flex flex-col gap-4">
     <Hero
       title="Для участвуя в розыгрыше выполните все условия:"
       :image="userStore.colorScheme === 'light' ? 'light_paper' : 'dark_paper'"
