@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dark_right_ticket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/light_right_ticket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Progress/Progress.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +67,7 @@
       <workItem from="1726719294799" duration="3692000" />
       <workItem from="1726729194415" duration="12615000" />
       <workItem from="1726803822310" duration="9795000" />
-      <workItem from="1726821320256" duration="4759000" />
+      <workItem from="1726821320256" duration="5050000" />
     </task>
     <servers />
   </component>
