@@ -64,6 +64,7 @@ onMounted(() => {
   webapp.MainButton.setText("Отправить в Телеграм");
   webapp.MainButton.setParams({
     color: "#F45A0E",
+    position: "bottom",
   });
   webapp.MainButton.show();
   webapp.MainButton.onClick(() => {
