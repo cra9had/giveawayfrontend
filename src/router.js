@@ -48,6 +48,11 @@ export default createRouter({
       component: () => import("./views/Winners/Winners3.vue"),
       name: "winners3",
     },
+    {
+      path: "/progress",
+      component: () => import("./views/Progress/Progress.vue"),
+      name: "progress",
+    },
 
     {
       path: "/:catchAll(.*)",
