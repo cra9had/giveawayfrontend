@@ -62,6 +62,9 @@ onUnmounted(() => {
     <router-link to="/winners" style="color: cornflowerblue"
       >Победа1</router-link
     >
+    <router-link to="/winners2" style="color: cornflowerblue"
+      >Победа2</router-link
+    >
     <Button
       @click="inviteUser"
       colorScheme="light"

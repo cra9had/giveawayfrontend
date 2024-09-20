@@ -1,8 +1,18 @@
 <template>
   <section class="flex flex-col items-center justify-center gap-1">
-    <p class="font-gilroy font-bold text-[18px] text-center text-orange_color">
+    <p
+      v-if="time"
+      class="font-gilroy font-bold text-[18px] text-center text-orange_color"
+    >
       {{ formattedTime }}
     </p>
+    <p
+      v-if="startDate"
+      class="font-gilroy font-bold text-[18px] text-center text-orange_color"
+    >
+      {{ startDate }}
+    </p>
+
     <p
       v-if="text"
       :class="[
@@ -32,9 +42,13 @@ const userStore = useUserStore();
 const props = defineProps({
   time: {
     type: String,
-    required: true,
+    required: false,
   },
   text: {
+    type: String,
+    required: false,
+  },
+  startDate: {
     type: String,
     required: false,
   },
@@ -80,6 +94,8 @@ const formattedTime = computed(() => formatTime(remainingSeconds.value));
 let intervalId;
 
 const startCounter = () => {
+  if (props.time)  {
+
   remainingSeconds.value = parseTime(props.time);
   intervalId = setInterval(() => {
     if (remainingSeconds.value > 0) {
@@ -88,6 +104,7 @@ const startCounter = () => {
       clearInterval(intervalId);
     }
   }, 1000);
+  }
 };
 
 onMounted(() => {

@@ -33,10 +33,15 @@ export default createRouter({
       component: () => import("./views/Condition/ToDoCondition.vue"),
       name: "todo-condition",
     },
-   {
+    {
       path: "/winners",
       component: () => import("./views/Winners/Winners.vue"),
       name: "winners",
+    },
+    {
+      path: "/winners2",
+      component: () => import("./views/Winners/Winners2.vue"),
+      name: "winners2",
     },
 
     {

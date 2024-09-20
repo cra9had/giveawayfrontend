@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/light_prize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/prize.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/dark_prize.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Counter/Counter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter/Counter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Winners/WinnerCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Winners/WinnerCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +77,8 @@
       <workItem from="1726678408893" duration="3367000" />
       <workItem from="1726719294799" duration="3692000" />
       <workItem from="1726729194415" duration="12615000" />
-      <workItem from="1726803822310" duration="9509000" />
+      <workItem from="1726803822310" duration="9795000" />
+      <workItem from="1726821320256" duration="1471000" />
     </task>
     <servers />
   </component>
@@ -97,7 +105,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Counter/Counter.vue</url>
           <line>2</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

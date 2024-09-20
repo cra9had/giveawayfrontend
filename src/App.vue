@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <main class="flex justify-center">
-    <div class="">
+    <div class="max-w-lg">
       <router-view></router-view>
     </div>
   </main>

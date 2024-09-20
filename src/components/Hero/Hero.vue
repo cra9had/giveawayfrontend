@@ -8,7 +8,8 @@ import light_cup from "@/assets/icons/light_cup.svg";
 import error from "@/assets/icons/error.svg";
 import dark_paper from "@/assets/icons/dark_paper.svg";
 import light_paper from "@/assets/icons/light_paper.svg";
-import prize from "@/assets/icons/prize.svg";
+import dark_prize from "@/assets/icons/dark_prize.svg";
+import light_prize from "@/assets/icons/light_prize.svg";
 import dark_search from "@/assets/icons/dark_search.svg";
 import light_search from "@/assets/icons/light_search.svg";
 
@@ -29,7 +30,8 @@ const images = {
   error,
   light_paper,
   dark_paper,
-  prize,
+  dark_prize,
+  light_prize,
   dark_search,
   light_search,
 };
