@@ -62,7 +62,6 @@ const images = {
   dark_ticket,
   light_ticket,
 };
-const selectedImage = computed(() => images[props.image]);
 </script>
 
 <style scoped></style>

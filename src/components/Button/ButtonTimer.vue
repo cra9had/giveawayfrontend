@@ -19,13 +19,15 @@ const countdown = ref(props.timer);
 let interval;
 
 const startCountdown = () => {
-  const [minutes, seconds] = countdown.value.split(':').map(Number);
+  const [minutes, seconds] = countdown.value.split(":").map(Number);
   let timeLeft = minutes * 60 + seconds;
 
   interval = setInterval(() => {
     timeLeft--;
-    const newMinutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-    const newSeconds = (timeLeft % 60).toString().padStart(2, '0');
+    const newMinutes = Math.floor(timeLeft / 60)
+      .toString()
+      .padStart(2, "0");
+    const newSeconds = (timeLeft % 60).toString().padStart(2, "0");
     countdown.value = `${newMinutes}:${newSeconds}`;
 
     if (timeLeft <= 0) clearInterval(interval);
@@ -43,18 +45,21 @@ onMounted(() => {
   if (props.timer) startCountdown();
 });
 
-watch(() => props.timer, () => {
-  if (interval) clearInterval(interval);
-  startCountdown();
-});
+watch(
+  () => props.timer,
+  () => {
+    if (interval) clearInterval(interval);
+    startCountdown();
+  },
+);
 </script>
 
 <template>
   <a
-      :href="a"
-      target="_blank"
-      @click="(e) => click(e)"
-      :class="[
+    :href="a"
+    target="_blank"
+    @click="(e) => click(e)"
+    :class="[
       colorScheme === 'light' &&
         (userStore.colorScheme === 'light'
           ? 'bg-[#D0D9FA] text-[#1B1C37]'

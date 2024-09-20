@@ -42,8 +42,6 @@ const selectedImage = computed(() => images[props.image]);
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="flex flex-col items-center text-center gap-2">
-      <!-- <DuckError v-if="is_error" />
-      <Duck v-if="!is_error && lottie" :name="lottie" /> -->
       <img
         draggable="false"
         class="mb-2 select-none"

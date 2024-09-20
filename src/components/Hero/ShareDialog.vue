@@ -85,7 +85,6 @@
           </div>
         </div>
       </main>
-
       <main
         class="m-l-auto flex flex-col justify-start gap-2 items-start w-full"
       >

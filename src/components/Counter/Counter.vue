@@ -36,9 +36,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useUserStore } from "@/stores/useUserStore.js";
-
 const userStore = useUserStore();
-
 const props = defineProps({
   time: {
     type: String,
@@ -94,16 +92,15 @@ const formattedTime = computed(() => formatTime(remainingSeconds.value));
 let intervalId;
 
 const startCounter = () => {
-  if (props.time)  {
-
-  remainingSeconds.value = parseTime(props.time);
-  intervalId = setInterval(() => {
-    if (remainingSeconds.value > 0) {
-      remainingSeconds.value--;
-    } else {
-      clearInterval(intervalId);
-    }
-  }, 1000);
+  if (props.time) {
+    remainingSeconds.value = parseTime(props.time);
+    intervalId = setInterval(() => {
+      if (remainingSeconds.value > 0) {
+        remainingSeconds.value--;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 1000);
   }
 };
 
