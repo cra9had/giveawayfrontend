@@ -7,6 +7,7 @@ import Counter from "@/components/Counter/Counter.vue";
 import Ticket from "@/components/Hero/Ticket.vue";
 import ShareDialog from "@/components/Hero/ShareDialog.vue";
 import AboutDialog from "@/components/Hero/AboutDialog.vue";
+import {useRouter} from "vue-router";
 
 const isOpen = ref(false);
 const inviteModal = ref(false);
@@ -33,7 +34,7 @@ const handleKeyDown = (event) => {
 };
 
 const webapp = window.Telegram.WebApp;
-
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {

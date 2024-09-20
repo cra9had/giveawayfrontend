@@ -44,10 +44,11 @@ import ConditionCard from "@/components/Condition/ConditionCard.vue";
 import Button from "@/components/Button/Button.vue";
 import ButtonRoute from "@/components/Button/ButtonRoute.vue";
 import {onMounted} from "vue";
+import {useRouter} from "vue-router";
 
 const userStore = useUserStore();
 const webapp = window.Telegram.WebApp;
-
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {

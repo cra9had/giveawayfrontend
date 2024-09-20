@@ -1,6 +1,7 @@
 <script setup>
 
 import {onMounted} from "vue";
+import {useRouter} from "vue-router";
 
 defineProps({
   title:{
@@ -15,7 +16,7 @@ defineProps({
   }
 })
 const webapp = window.Telegram.WebApp;
-
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {

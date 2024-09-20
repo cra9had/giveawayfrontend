@@ -14,10 +14,11 @@
 import Hero from "@/components/Hero/Hero.vue";
 import { useUserStore } from "@/stores/useUserStore.js";
 import {onMounted} from "vue";
+import {useRouter} from "vue-router";
 
 const userStore = useUserStore();
 const webapp = window.Telegram.WebApp;
-
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {

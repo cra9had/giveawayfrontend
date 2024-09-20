@@ -9,6 +9,7 @@ const isOpen = ref(false);
 
 import { useUserStore } from "@/stores/useUserStore.js";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
+import {useRouter} from "vue-router";
 
 const userStore = useUserStore();
 
@@ -30,6 +31,7 @@ const handleKeyDown = (event) => {
 
 const webapp = window.Telegram.WebApp;
 
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {

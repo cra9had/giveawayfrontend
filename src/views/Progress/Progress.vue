@@ -317,9 +317,10 @@ const parameters = ref([
 ]);
 import image from "@/assets/icons/user.svg";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
+import {useRouter} from "vue-router";
 
 const webapp = window.Telegram.WebApp;
-
+const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {
