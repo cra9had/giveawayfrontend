@@ -34,6 +34,16 @@ export default createRouter({
       name: "todo-condition",
     },
     {
+      path: "/todo-condition2",
+      component: () => import("./views/Condition/ToDoCondition2.vue"),
+      name: "todo-condition2",
+    },
+    {
+      path: "/todo-condition3",
+      component: () => import("./views/Condition/ToDoCondition3.vue"),
+      name: "todo-condition3",
+    },
+    {
       path: "/winners",
       component: () => import("./views/Winners/Winners.vue"),
       name: "winners",

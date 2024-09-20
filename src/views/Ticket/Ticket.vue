@@ -59,6 +59,12 @@ onUnmounted(() => {
     <router-link to="/todo-condition" style="color: cornflowerblue"
       >Условия не выполнены 1</router-link
     >
+    <router-link to="/todo-condition2" style="color: cornflowerblue"
+      >Условия не выполнены 2</router-link
+    >
+    <router-link to="/todo-condition3" style="color: cornflowerblue"
+      >Условия не выполнены 3</router-link
+    >
     <router-link to="/winners" style="color: cornflowerblue"
       >Победа1</router-link
     >
@@ -67,7 +73,8 @@ onUnmounted(() => {
     >
     <router-link to="/winners3" style="color: cornflowerblue"
       >Победа3</router-link
-    >  <router-link to="/progress" style="color: cornflowerblue"
+    >
+    <router-link to="/progress" style="color: cornflowerblue"
       >Ход розыгрыша</router-link
     >
     <Button
