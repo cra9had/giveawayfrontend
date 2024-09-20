@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-full">
-    <div class="flex p-4 flex-col gap-2">
+    <div class="flex p-4 pb-16 flex-col gap-2">
       <Hero
         title="Вы не выполнили условия розыгрыша!"
         image="error"
@@ -65,6 +65,7 @@ onMounted(() => {
   webapp.MainButton.setParams({
     color: "#F45A0E",
     position: "bottom",
+    size: "full",
   });
   webapp.MainButton.show();
   webapp.MainButton.onClick(() => {
