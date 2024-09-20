@@ -43,6 +43,11 @@ export default createRouter({
       component: () => import("./views/Winners/Winners2.vue"),
       name: "winners2",
     },
+    {
+      path: "/winners3",
+      component: () => import("./views/Winners/Winners3.vue"),
+      name: "winners3",
+    },
 
     {
       path: "/:catchAll(.*)",
