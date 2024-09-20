@@ -267,8 +267,8 @@
             style="transform: translateY(-4px)"
           >
             Участник с билетом
-            <span class="font-bold">«1uL8y4» (Nik@...)</span> <br />
-            побеждает и занимает <span class="font-bold">1 место</span> в <br />
+            <span class="font-bold">«1uL8y4» (Nik@...)</span>
+            побеждает и занимает <span class="font-bold">1 место</span> в
             розыгрыше!
           </p>
         </div>
