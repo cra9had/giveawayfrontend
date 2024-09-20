@@ -1,10 +1,9 @@
 <script setup>
-
-import {onMounted} from "vue";
-import {useRouter} from "vue-router";
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
 
 defineProps({
-  title:{
+  title: {
     required: false,
     default: "Ошибка!",
     type: String,
@@ -13,8 +12,8 @@ defineProps({
     required: false,
     default: `Данная функция<br />находится в разработке`,
     type: String,
-  }
-})
+  },
+});
 const webapp = window.Telegram.WebApp;
 const router = useRouter();
 onMounted(() => {
@@ -27,9 +26,9 @@ onMounted(() => {
 
 <template>
   <transition name="fade" appear>
-    <div class="flex p-4 flex-col justify-center items-center h-dvh ">
-   {{title}}
-    <router-link to="/" class="text-[blue] font-underline">home</router-link>
+    <div class="flex p-4 flex-col justify-center items-center h-dvh">
+      {{ title }}
+      <router-link to="/" class="text-[blue] font-underline">home</router-link>
     </div>
   </transition>
 </template>

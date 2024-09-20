@@ -9,7 +9,7 @@ const isOpen = ref(false);
 
 import { useUserStore } from "@/stores/useUserStore.js";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
-import {useRouter} from "vue-router";
+import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
 
@@ -50,12 +50,11 @@ onUnmounted(() => {
       title="Вы победили в розыгрыше!"
       :image="userStore.colorScheme === 'light' ? 'light_prize' : 'dark_prize'"
       :description="`
-    Поздравляем! Вы заняли 1 место в розыгрыше: <b><span class='text-black'>Название «Розыгрыша»</span></b>, <br/>
-    ваш выигрышный билет <b><span class='font-uppercase text-black'>«1HL9R3»</span></b>.
+    Поздравляем! Вы заняли 1 место в розыгрыше: <b><span class=''> Название «Розыгрыша»</span></b>, <br/>
+    ваш выигрышный билет <b><span class='font-uppercase'>«1HL9R3»</span></b>.
     Для получения приза свяжитесь с администратором розыгрыша:
   `"
     />
-
     <div
       class="cup-title text-[16px] font-bold font-gilroy leading-[19px] text-center"
     >
