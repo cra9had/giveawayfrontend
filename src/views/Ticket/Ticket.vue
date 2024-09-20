@@ -52,8 +52,12 @@ onUnmounted(() => {
     <Counter time="06:01:52" text="До завершения" />
     <router-link to="/condition" style="color: cornflowerblue"
       >Выполнение условий</router-link
-    >    <router-link to="/checking" style="color: cornflowerblue"
+    >
+    <router-link to="/checking" style="color: cornflowerblue"
       >Проверка</router-link
+    >
+    <router-link to="/todo-condition" style="color: cornflowerblue"
+      >Условия не выполнены 1</router-link
     >
     <Button
       @click="inviteUser"

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 const webapp = window.Telegram.WebApp;
 onMounted(() => {
   webapp.expand();

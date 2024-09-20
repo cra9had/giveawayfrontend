@@ -25,6 +25,10 @@ export default createRouter({
       path: "/condition",
       component: () => import("./views/Condition/Condition.vue"),
       name: "condition",
+    },{
+      path: "/todo-condition",
+      component: () => import("./views/Condition/ToDoCondition.vue"),
+      name: "todo-condition",
     },
 
     {
