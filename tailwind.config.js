@@ -14,6 +14,10 @@ export default {
         text_light_color: "#B0B3C5",
         text_dark_color: "#737E87",
       },
+      backgroundImage: {
+        'light-ticket': `url('@/assets/icons/ticket_light_bg.svg')`,
+        'dark-ticket': `url('@/assets/icons/ticket_dark_bg.svg')`,
+      },
       fontFamily: {
         gilroy: [
           "Gilroy",

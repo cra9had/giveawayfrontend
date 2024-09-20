@@ -1,14 +1,10 @@
 <template>
   <div
-    :class="[
-      'flex justify-between  items-center p-2 gap-2 rounded-[4px] cursor-pointer',
-
+      :class="[
+      'flex justify-between items-center p-2 gap-2 rounded-[4px] cursor-pointer bg-cover bg-center',
+      userStore.colorScheme === 'light' ? 'bg-light-ticket' : 'bg-dark-ticket',
     ]"
-    :style="{
-      backgroundImage: userStore.colorScheme === 'light' ? `url(${light_ticket})` : `url(${dark_ticket})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }"
+
   >
     <img
       :src="userImage"
