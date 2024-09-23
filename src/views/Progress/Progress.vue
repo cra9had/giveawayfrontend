@@ -1,5 +1,5 @@
 <template>
-  <div ref="scrollContainer" class="flex max-h-[100vh] overflow-scroll flex-col p-4 gap-4 w-full relative min-w-[345px]">
+  <div ref="scrollContainer" class="flex max-h-[100vh] transition overflow-scroll flex-col p-4 gap-4 w-full  min-w-[345px]">
     <div
       class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
       :class="[
@@ -77,7 +77,7 @@
       </p>
       <div class="dialog_card w-full text-left flex flex-col gap-1" ref="cards">
         <transition-group
-          name="fade-slide"
+          name="slide-top"
           tag="div"
           class="flex flex-col gap-1"
         >
@@ -267,27 +267,4 @@ onMounted(() => {
 });
 
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.dialog_card div {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+<style scoped></style>
