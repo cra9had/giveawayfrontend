@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonTimer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonTimer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Progress/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Progress/Progress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <workItem from="1726803822310" duration="9795000" />
       <workItem from="1726821320256" duration="9332000" />
       <workItem from="1726848042363" duration="2056000" />
-      <workItem from="1727065409706" duration="5244000" />
+      <workItem from="1727065409706" duration="7570000" />
     </task>
     <servers />
   </component>
@@ -106,11 +105,6 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/Progress/Progress.vue</url>
-          <line>66</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Counter/Counter.vue</url>
           <line>44</line>
           <option name="timeStamp" value="14" />
@@ -131,6 +125,18 @@
           <line>65</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/Progress/Progress.vue</url>
+          <line>67</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/Progress/Progress.vue</url>
+          <line>246</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-4 gap-4 w-full relative min-w-[345px]">
+  <div ref="scrollContainer" class="flex max-h-[100vh] overflow-scroll flex-col p-4 gap-4 w-full relative min-w-[345px]">
     <div
       class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
       :class="[
@@ -116,7 +116,7 @@
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
-import { onMounted, ref } from "vue";
+import {nextTick, onMounted, ref} from "vue";
 const userStore = useUserStore();
 const parameters = ref([
   "Участников: 1",
@@ -128,6 +128,7 @@ import WinnerCard from "@/components/Winners/WinnerCard.vue";
 import { useRouter } from "vue-router";
 import Confetti from "@/components/Lottie/Confetti.vue";
 const visibleItems = ref([]);
+const scrollContainer = ref(null);
 
 const allItems = [
   {
@@ -248,12 +249,23 @@ onMounted(() => {
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
+
   allItems.forEach((item, index) => {
     setTimeout(() => {
       visibleItems.value.push({ ...item, visible: true });
+
+      nextTick(() => {
+        if (scrollContainer.value) {
+          scrollContainer.value.scrollTo({
+            top: scrollContainer.value.scrollHeight,
+            behavior: 'smooth'
+          });
+        }
+      });
     }, index * 600);
   });
 });
+
 </script>
 
 <style scoped>

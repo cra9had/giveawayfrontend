@@ -3,7 +3,7 @@
       :is="link ? 'router-link' : 'div'"
       :to="link || undefined"
       :class="[
-      'flex items-center p-2 rounded-[4px] cursor-pointer',
+      'flex items-center px-2 py-2.5 rounded-[4px] cursor-pointer',
       userStore.colorScheme === 'light' ? 'bg-white' : 'bg-[#32334B]',
     ]"
   >

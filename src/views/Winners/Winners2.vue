@@ -13,10 +13,6 @@ import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
 
-
-
-
-
 const handleKeyDown = (event) => {
   if (event.key === "Escape") {
     isOpen.value = false;
