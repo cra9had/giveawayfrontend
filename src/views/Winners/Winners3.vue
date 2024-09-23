@@ -13,15 +13,7 @@ import {useRouter} from "vue-router";
 
 const userStore = useUserStore();
 
-const openDialog = () => {
-  isOpen.value = true;
-};
 
-const closeDialog = (event) => {
-  if (event.target.classList.contains("modal-overlay")) {
-    isOpen.value = false;
-  }
-};
 
 const handleKeyDown = (event) => {
   if (event.key === "Escape") {
@@ -37,6 +29,7 @@ onMounted(() => {
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
+  webapp.MainButton.hide();
   document.addEventListener("keydown", handleKeyDown);
 });
 

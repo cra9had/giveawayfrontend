@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="" />
+    <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/views/404/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/404/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Checking/Checking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Checking/Checking.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Condition/Condition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Condition/Condition.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Progress/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Progress/Progress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners3.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +79,7 @@
       <workItem from="1726803822310" duration="9795000" />
       <workItem from="1726821320256" duration="9332000" />
       <workItem from="1726848042363" duration="2056000" />
-      <workItem from="1727065409706" duration="8977000" />
+      <workItem from="1727065409706" duration="9472000" />
     </task>
     <servers />
   </component>

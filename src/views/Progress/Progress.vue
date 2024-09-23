@@ -246,6 +246,7 @@ const webapp = window.Telegram.WebApp;
 const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
+  webapp.MainButton.hide();
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });

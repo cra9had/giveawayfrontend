@@ -54,6 +54,7 @@ onMounted(() => {
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
+  webapp.MainButton.hide();
 });
 </script>
 
