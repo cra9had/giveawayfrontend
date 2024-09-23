@@ -3,9 +3,8 @@ import { onMounted } from "vue";
 const webapp = window.Telegram.WebApp;
 onMounted(() => {
   webapp.expand();
-  window.addEventListener("touchmove", (e) => e.preventDefault(), {
-    passive: false,
-  });
+  // window.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+
   webapp.ready();
   webapp.MainButton.hide();
   webapp.BackButton.hide();
