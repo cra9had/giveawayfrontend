@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 const webapp = window.Telegram.WebApp;
 onMounted(() => {
-  webapp.expand();
+  // webapp.expand();
   // window.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
 
   webapp.ready();
