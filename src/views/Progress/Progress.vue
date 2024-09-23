@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-4 gap-4 w-full min-w-[345px]">
+  <div class="flex flex-col p-4 gap-4 w-full relative min-w-[345px]">
     <div
       class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
       :class="[
@@ -182,8 +182,8 @@
                 1. Ставки на сумму 1000 тенге в игре Lemon
               </p>
               <div
-                  class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px]  leading-[14px] font-bold font-gilroy',"
-                  :class="
+                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
+                :class="
                   userStore.colorScheme === 'light'
                     ? 'text-[#1B1C37]'
                     : 'text-[#fff]'
@@ -207,7 +207,7 @@
                 2. Подписка вашего друга в телеграмм канале
               </p>
               <div
-                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px]  leading-[14px] font-bold font-gilroy',"
+                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
                 :class="
                   userStore.colorScheme === 'light'
                     ? 'text-[#1B1C37]'
@@ -232,8 +232,8 @@
                 3. Подтвердил номер телефона
               </p>
               <div
-                  class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px]  leading-[14px] font-bold font-gilroy',"
-                  :class="
+                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
+                :class="
                   userStore.colorScheme === 'light'
                     ? 'text-[#1B1C37]'
                     : 'text-[#fff]'
@@ -268,8 +268,8 @@
           >
             Участник с билетом
             <span class="font-bold">«1uL8y4» (Nik@...)</span>
-            побеждает и занимает <br> <span class="font-bold">1 место</span> в
-            розыгрыше!
+            побеждает и занимает <br />
+            <span class="font-bold">1 место</span> в розыгрыше!
           </p>
         </div>
         <div
@@ -303,12 +303,13 @@
         </div>
       </div>
     </div>
+    <Confetti class="absolute top-0 right-0 left-0" />
   </div>
 </template>
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
-import {onMounted, ref} from "vue";
+import { onMounted, ref } from "vue";
 const userStore = useUserStore();
 const parameters = ref([
   "Участников: 1",
@@ -317,7 +318,8 @@ const parameters = ref([
 ]);
 import image from "@/assets/icons/user.svg";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
-import {useRouter} from "vue-router";
+import { useRouter } from "vue-router";
+import Confetti from "@/components/Lottie/Confetti.vue";
 
 const webapp = window.Telegram.WebApp;
 const router = useRouter();
