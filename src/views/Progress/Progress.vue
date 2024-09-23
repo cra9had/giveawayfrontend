@@ -250,12 +250,11 @@ const router = useRouter();
 onMounted(() => {
   webapp.BackButton.show();
   webapp.MainButton.hide();
+  webapp.MainButton.isVisible = false;
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
-  window.addEventListener("touchmove", {
-    passive: false,
-  });
+
 
   allItems.forEach((item, index) => {
     setTimeout(() => {

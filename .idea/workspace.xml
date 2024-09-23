@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Progress/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Progress/Progress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Ticket/Ticket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
       <workItem from="1726803822310" duration="9795000" />
       <workItem from="1726821320256" duration="9332000" />
       <workItem from="1726848042363" duration="2056000" />
-      <workItem from="1727065409706" duration="11062000" />
+      <workItem from="1727065409706" duration="11363000" />
     </task>
     <servers />
   </component>

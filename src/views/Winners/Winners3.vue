@@ -30,7 +30,7 @@ onMounted(() => {
     router.go(-1);
   });
   webapp.MainButton.hide();
-  window.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+  webapp.MainButton.isVisible = false;
   document.addEventListener("keydown", handleKeyDown);
 });
 

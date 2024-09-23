@@ -31,6 +31,7 @@ onMounted(() => {
   document.addEventListener("keydown", handleKeyDown);
   webapp.BackButton.hide();
   webapp.MainButton.hide();
+  webapp.MainButton.isVisible = false;
 });
 
 onUnmounted(() => {

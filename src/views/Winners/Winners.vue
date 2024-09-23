@@ -36,7 +36,7 @@ onMounted(() => {
     router.go(-1);
   });
   webapp.MainButton.hide();
-  window.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+  webapp.MainButton.isVisible = false;
 
   document.addEventListener("keydown", handleKeyDown);
 });
@@ -60,7 +60,7 @@ onUnmounted(() => {
     </div>
     <Counter startDate="03.09.2024, 20:22" isGreen="Завершился" />
     <div class="flex items-center justify-center">
-    <Button colorScheme="light" title="Как выбирались победители" />
+      <Button colorScheme="light" title="Как выбирались победители" />
     </div>
     <div class="winners">
       <p

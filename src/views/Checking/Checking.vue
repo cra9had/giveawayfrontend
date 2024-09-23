@@ -25,6 +25,7 @@ onMounted(() => {
     router.go(-1);
   });
   webapp.MainButton.hide();
+  webapp.MainButton.isVisible = false;
 });
 </script>
 

@@ -41,10 +41,9 @@ onMounted(() => {
     router.go(-1);
   });
   webapp.MainButton.hide();
+  webapp.MainButton.isVisible = false;
   document.addEventListener("keydown", handleKeyDown);
-  window.addEventListener("touchmove", {
-    passive: false,
-  });
+
 });
 
 onUnmounted(() => {
