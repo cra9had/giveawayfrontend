@@ -1,13 +1,15 @@
 <template>
   <div class="flex flex-col h-full">
-    <div class="flex p-4 pb-16 flex-col gap-2">
+    <div class="flex  p-4 pb-16 flex-col gap-2">
       <Hero
         title="Вы не выполнили условия розыгрыша!"
         image="error"
         description="Для розыгрыша выполните все условия"
       />
       <Counter time="06:01:52" text="До завершения" class="" />
+      <div class="flex items-center justify-center">
       <Button colorScheme="light" title="Подробнее о розыгрыше" />
+      </div>
       <div class="conditions flex flex-col gap-2 mt-4">
         <ToDoConditionCard
           title="Ставки на сумму 1000 тенге в игре Lemon"

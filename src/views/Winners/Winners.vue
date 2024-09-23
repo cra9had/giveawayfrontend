@@ -59,7 +59,9 @@ onUnmounted(() => {
       Название «Розыгрыша»
     </div>
     <Counter startDate="03.09.2024, 20:22" isGreen="Завершился" />
+    <div class="flex items-center justify-center">
     <Button colorScheme="light" title="Как выбирались победители" />
+    </div>
     <div class="winners">
       <p
         :class="[

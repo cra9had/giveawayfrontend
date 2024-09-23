@@ -7,7 +7,9 @@
         description="Для розыгрыша выполните все условия"
       />
       <Counter time="06:01:52" text="До завершения" class="" />
-      <Button colorScheme="light" title="Подробнее о розыгрыше" />
+      <div class="flex items-center justify-center">
+        <Button colorScheme="light" title="Подробнее о розыгрыше" />
+      </div>
       <div class="conditions flex flex-col gap-2 mt-4">
         <ToDoConditionCard3
           title="Ставки на сумму 1000 тенге в игре Lemon"
