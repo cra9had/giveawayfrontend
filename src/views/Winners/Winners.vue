@@ -55,7 +55,7 @@ onUnmounted(() => {
     >
       Название «Розыгрыша»
     </div>
-    <Counter time="06:01:52" isGreen="Завершился" />
+    <Counter startDate="03.09.2024, 20:22" isGreen="Завершился" />
     <Button colorScheme="light" title="Как выбирались победители" />
     <div class="winners">
       <p

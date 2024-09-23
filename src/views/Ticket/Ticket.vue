@@ -7,7 +7,7 @@ import Counter from "@/components/Counter/Counter.vue";
 import Ticket from "@/components/Hero/Ticket.vue";
 import ShareDialog from "@/components/Hero/ShareDialog.vue";
 import AboutDialog from "@/components/Hero/AboutDialog.vue";
-import {useRouter} from "vue-router";
+import { useRouter } from "vue-router";
 
 const isOpen = ref(false);
 const inviteModal = ref(false);
@@ -49,7 +49,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="h-dvh p-4 flex flex-col gap-5">
+  <main class="overflow-scroll p-4 flex flex-col gap-5">
     <Hero
       title="Вы получили билет «1hl9r3»"
       image="check"
@@ -57,33 +57,35 @@ onUnmounted(() => {
       secondDescription="Не отписывайтесь от каналов до окончания розыгрыша! "
     />
     <Counter time="06:01:52" text="До завершения" />
-    <router-link to="/condition" style="color: cornflowerblue"
-      >Выполнение условий</router-link
-    >
-    <router-link to="/checking" style="color: cornflowerblue"
-      >Проверка</router-link
-    >
-    <router-link to="/todo-condition" style="color: cornflowerblue"
-      >Условия не выполнены 1</router-link
-    >
-    <router-link to="/todo-condition2" style="color: cornflowerblue"
-      >Условия не выполнены 2</router-link
-    >
-    <router-link to="/todo-condition3" style="color: cornflowerblue"
-      >Условия не выполнены 3</router-link
-    >
-    <router-link to="/winners" style="color: cornflowerblue"
-      >Победа1</router-link
-    >
-    <router-link to="/winners2" style="color: cornflowerblue"
-      >Победа2</router-link
-    >
-    <router-link to="/winners3" style="color: cornflowerblue"
-      >Победа3</router-link
-    >
-    <router-link to="/progress" style="color: cornflowerblue"
-      >Ход розыгрыша</router-link
-    >
+    <div class="flex flex-col">
+      <router-link to="/condition" style="color: cornflowerblue"
+        >Выполнение условий</router-link
+      >
+      <router-link to="/checking" style="color: cornflowerblue"
+        >Проверка</router-link
+      >
+      <router-link to="/todo-condition" style="color: cornflowerblue"
+        >Условия не выполнены 1</router-link
+      >
+      <router-link to="/todo-condition2" style="color: cornflowerblue"
+        >Условия не выполнены 2</router-link
+      >
+      <router-link to="/todo-condition3" style="color: cornflowerblue"
+        >Условия не выполнены 3</router-link
+      >
+      <router-link to="/winners" style="color: cornflowerblue"
+        >Победа1</router-link
+      >
+      <router-link to="/winners2" style="color: cornflowerblue"
+        >Победа2</router-link
+      >
+      <router-link to="/winners3" style="color: cornflowerblue"
+        >Победа3</router-link
+      >
+      <router-link to="/progress" style="color: cornflowerblue"
+        >Ход розыгрыша</router-link
+      >
+    </div>
     <Button
       @click="inviteUser"
       colorScheme="light"

@@ -71,7 +71,7 @@ watch(
       'font-gilroy font-medium text-center cursor-pointer transition text-[16px] flex justify-center items-center min-h-[50px] rounded-[6px] w-full max-w-lg px-2 active:opacity-75',
     ]"
   >
-    {{ title }}
+    {{ title }} &nbsp;
     <span v-if="countdown">({{ countdown }})</span>
   </a>
 </template>

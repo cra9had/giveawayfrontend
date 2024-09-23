@@ -1,12 +1,12 @@
 <template>
   <div
     :class="[
-      ' max-w-[600px] font-medium font-gilroy',
+      ' max-w-[600px]  font-medium font-gilroy',
       userStore.colorScheme === 'light'
         ? 'bg-primary_white_color'
         : 'bg-primary_dark_color',
     ]"
-    class="p-3 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
+    class="p-3 pb-8 flex flex-col justify-center rounded-t-lg w-full max-h-[90vh] overflow-y-auto text-center"
   >
     <div class="m-l-auto flex flex-col justify-start gap-4 items-start">
       <div
@@ -23,7 +23,7 @@
       >
         <p
           :class="[
-            'text-[14px] leading-[16px] font-bold font-gilroy',
+            'text-[16px] leading-[20px] font-bold font-gilroy',
             userStore.colorScheme === 'light'
               ? 'text-primary_dark_color'
               : 'text-[#fff]',
@@ -34,7 +34,7 @@
         </p>
         <p
           :class="[
-            'text-[14px] leading-[16px] font-medium font-gilroy',
+            'text-[14px] leading-[20px] font-medium font-gilroy',
             userStore.colorScheme === 'light'
               ? 'text-[#737E87]'
               : 'text-text_light_color',
