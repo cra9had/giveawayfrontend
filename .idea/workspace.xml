@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonRoute.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonRoute.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonTimer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonTimer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Counter/Counter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter/Counter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/ShareDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Winners/WinnerCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Winners/WinnerCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,8 @@
       <workItem from="1726729194415" duration="12615000" />
       <workItem from="1726803822310" duration="9795000" />
       <workItem from="1726821320256" duration="9332000" />
-      <workItem from="1726848042363" duration="1923000" />
+      <workItem from="1726848042363" duration="2056000" />
+      <workItem from="1727065409706" duration="1048000" />
     </task>
     <servers />
   </component>
@@ -126,8 +120,18 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Counter/Counter.vue</url>
           <line>44</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Hero/Ticket.vue</url>
+          <line>14</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tailwind.config.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
