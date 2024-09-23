@@ -67,7 +67,7 @@
     <div class="dialog_card">
       <p
         :class="[
-          ' text-[18px] font-normal font-gilroy',
+          'text-[18px] font-normal font-gilroy',
           userStore.colorScheme === 'light'
             ? 'text-primary_dark_color'
             : 'text-text_light_color',
@@ -75,235 +75,42 @@
       >
         Параметры розыгрыша
       </p>
-      <div class="dialog_card w-full text-left flex flex-col gap-1">
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-medium font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Загрузка участников розыгрыша... <br />
-          100%
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-bold py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Участники загружены!
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-medium flex items-center gap-1 py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
+      <div class="dialog_card w-full text-left flex flex-col gap-1" ref="cards">
+        <transition-group
+          name="fade-slide"
+          tag="div"
+          class="flex flex-col gap-1"
         >
           <div
-            class="circle w-[6px] h-[6px] bg-orange_color rounded-full"
-          ></div>
-          Количество участников - 2
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-bold py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Начинаем розыгрыш!
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-medium py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Выбираем победителя на <span class="font-bold"> 1 место</span>
-        </div>
-        <div
-          class="bg-cover bg-center bg-right-ticket"
-          :class="[
-            'text-[14px] leading-[16px] flex justify-between  items-center gap-1  font-medium py-4 font-gilroy rounded-[6px] p-2 ',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light'
-              ? 'bg-light-right-ticket'
-              : 'bg-dark-right-ticket',
-          ]"
-        >
-          <div class="flex items-center gap-1">
-            <div
-              class="circle w-[6px] h-[6px] bg-orange_color rounded-full"
-            ></div>
-            Выбран билет: <span class="font-bold"> «1uL8y4»</span>
-          </div>
-          <div class="username font-bold font-gilroy text-[14px]">Nik@...</div>
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] flex flex-col gap-2 font-bold py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Проверяем выполнение условий <br />
-          розыгрыша:
-          <div class="progress_list flex flex-col gap-2">
-            <div class="flex flex-col items-start justify-start gap-1">
-              <p
-                :class="[
-                  'text-[14px] leading-[16px] font-medium  font-gilroy rounded-[6px] ',
-                  userStore.colorScheme === 'light'
-                    ? 'text-primary_dark_color'
-                    : 'text-[#fff]',
-                  userStore.colorScheme === 'light'
-                    ? 'bg-[#fff]'
-                    : 'bg-[#32334B]',
-                ]"
-              >
-                1. Ставки на сумму 1000 тенге в игре Lemon
-              </p>
-              <div
-                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
-                :class="
-                  userStore.colorScheme === 'light'
-                    ? 'text-[#1B1C37]'
-                    : 'text-[#fff]'
-                "
-              >
-                Выполнено
-              </div>
-            </div>
-            <div class="flex flex-col items-start justify-start gap-1">
-              <p
-                :class="[
-                  'text-[14px] leading-[16px] font-medium  font-gilroy rounded-[6px] ',
-                  userStore.colorScheme === 'light'
-                    ? 'text-primary_dark_color'
-                    : 'text-[#fff]',
-                  userStore.colorScheme === 'light'
-                    ? 'bg-[#fff]'
-                    : 'bg-[#32334B]',
-                ]"
-              >
-                2. Подписка вашего друга в телеграмм канале
-              </p>
-              <div
-                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
-                :class="
-                  userStore.colorScheme === 'light'
-                    ? 'text-[#1B1C37]'
-                    : 'text-[#fff]'
-                "
-              >
-                Выполнено
-              </div>
-            </div>
-            <div class="flex flex-col items-start justify-start gap-1">
-              <p
-                :class="[
-                  'text-[14px] leading-[16px] font-medium  font-gilroy rounded-[6px] ',
-                  userStore.colorScheme === 'light'
-                    ? 'text-primary_dark_color'
-                    : 'text-[#fff]',
-                  userStore.colorScheme === 'light'
-                    ? 'bg-[#fff]'
-                    : 'bg-[#32334B]',
-                ]"
-              >
-                3. Подтвердил номер телефона
-              </p>
-              <div
-                class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy',"
-                :class="
-                  userStore.colorScheme === 'light'
-                    ? 'text-[#1B1C37]'
-                    : 'text-[#fff]'
-                "
-              >
-                Выполнено
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          :class="[
-            'flex  gap-1 py-4 rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          <div
-            class="circle min-w-[6px] h-[6px] bg-orange_color rounded-full"
-          ></div>
-          <p
+            v-for="(item, index) in visibleItems"
+            :key="index"
+            v-show="item.visible"
             :class="[
-              'text-[14px] leading-[16px] font-medium',
+              'text-[14px] leading-[16px] font-medium font-gilroy rounded-[6px] px-2',
               userStore.colorScheme === 'light'
                 ? 'text-primary_dark_color'
                 : 'text-[#fff]',
               userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
             ]"
-            style="transform: translateY(-4px)"
+            :style="item.style"
           >
-            Участник с билетом
-            <span class="font-bold">«1uL8y4» (Nik@...)</span>
-            побеждает и занимает <br />
-            <span class="font-bold">1 место</span> в розыгрыше!
-          </p>
-        </div>
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-medium py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-primary_dark_color'
-              : 'text-[#fff]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          Поздравляем победителей!
-        </div>
-        <WinnerCard
-          :userImage="image"
-          username="Nik@..."
-          title="Билет: <b>«1uL8y4»</b>"
-          :id="1"
-        />
-        <div
-          :class="[
-            'text-[14px] leading-[16px] font-bold flex items-center gap-1 py-4 font-gilroy rounded-[6px] p-2',
-            userStore.colorScheme === 'light'
-              ? 'text-[#00C172]'
-              : 'text-[#00C172]',
-            userStore.colorScheme === 'light' ? 'bg-[#fff]' : 'bg-[#32334B]',
-          ]"
-        >
-          <div class="circle w-[6px] h-[6px] bg-[#00C172] rounded-full"></div>
-          Количество участников - 2
-        </div>
+            <div
+              v-if="item.innerHTML"
+              v-html="item.innerHTML"
+              :class="item.additionalClass"
+              :style="item.style"
+            ></div>
+            <component :is="item.component" v-bind="item.props">
+              <template
+                class="flex flex-col"
+                v-if="item.innerHTML"
+                v-html="item.innerHTML"
+              ></template>
+            </component>
+          </div>
+        </transition-group>
       </div>
     </div>
-    <Confetti class="absolute top-0 right-0 left-0" />
   </div>
 </template>
 
@@ -320,7 +127,120 @@ import image from "@/assets/icons/user.svg";
 import WinnerCard from "@/components/Winners/WinnerCard.vue";
 import { useRouter } from "vue-router";
 import Confetti from "@/components/Lottie/Confetti.vue";
+const visibleItems = ref([]);
 
+const allItems = [
+  {
+    component: "div",
+    innerHTML: "Загрузка участников розыгрыша... <br /> 100%",
+    visible: false,
+    additionalClass: "font-bold py-4",
+  },
+  {
+    component: "div",
+    innerHTML: "Участники загружены!",
+    additionalClass: "font-bold py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML:
+      '<div class="circle w-[6px] h-[6px] bg-orange_color rounded-full"></div> Количество участников - 2',
+    additionalClass: "flex items-center gap-1 py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: "Начинаем розыгрыш!",
+    additionalClass: "font-bold py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: 'Выбираем победителя на <span class="font-bold"> 1 место</span>',
+    additionalClass: "py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: `
+      <div class="flex items-center gap-1">
+        <div class="circle w-[6px] h-[6px] bg-orange_color rounded-full"></div>
+        Выбран билет: <span class="font-bold"> «1uL8y4»</span>
+      </div>
+      <div class="username font-bold font-gilroy text-[14px]">Nik@...</div>
+    `,
+    additionalClass:
+      "bg-cover bg-center bg-right-ticket flex justify-between items-center gap-1 py-4",
+    style: {
+      backgroundImage:
+        userStore.colorScheme === "light"
+          ? "url(bg-light-right-ticket.png)"
+          : "url(bg-dark-right-ticket.png)",
+    },
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: `
+      Проверяем выполнение условий <br />
+      розыгрыша:
+      <div class="progress_list flex flex-col gap-2">
+        <div class="flex flex-col items-start justify-start gap-1">
+          <p>1. Ставки на сумму 1000 тенге в игре Lemon</p>
+          <div class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy">Выполнено</div>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-1">
+          <p>2. Подписка вашего друга в телеграмм канале</p>
+          <div class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy">Выполнено</div>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-1">
+          <p>3. Подтвердил номер телефона</p>
+          <div class="text-[12px] bg-[#00C172] rounded-[50px] w-[73px] flex items-center justify-center h-[20px] leading-[14px] font-bold font-gilroy">Выполнено</div>
+        </div>
+      </div>
+    `,
+    additionalClass: "flex flex-col gap-2 font-bold py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: `
+      <div class="circle min-w-[6px] h-[6px] bg-orange_color rounded-full"></div>
+      <p style="transform: translateY(-4px)">
+        Участник с билетом
+        <span class="font-bold">«1uL8y4» (Nik@...)</span>
+        побеждает и занимает <br />
+        <span class="font-bold">1 место</span> в розыгрыше!
+      </p>
+    `,
+    additionalClass: "flex gap-1 py-4",
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML: "Поздравляем победителей!",
+    additionalClass: "py-4",
+    visible: false,
+  },
+  {
+    component: WinnerCard,
+    props: {
+      userImage: image,
+      username: "Nik@...",
+      title: "Билет: <b>«1uL8y4»</b>",
+      id: 1,
+    },
+    visible: false,
+  },
+  {
+    component: "div",
+    innerHTML:
+      '<div class="circle w-[6px] h-[6px] bg-[#00C172] rounded-full"></div> Количество участников - 2',
+    additionalClass: "font-bold flex items-center gap-1 py-4 text-[#00C172]",
+    visible: false,
+  },
+];
 const webapp = window.Telegram.WebApp;
 const router = useRouter();
 onMounted(() => {
@@ -328,7 +248,34 @@ onMounted(() => {
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
+  allItems.forEach((item, index) => {
+    setTimeout(() => {
+      visibleItems.value.push({ ...item, visible: true });
+    }, index * 600);
+  });
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.dialog_card div {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
