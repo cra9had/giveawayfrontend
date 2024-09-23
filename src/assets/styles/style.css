@@ -106,19 +106,3 @@ html {
   transform: translateY(20px);
   opacity: 0;
 }
-
-/* telegram*/
-.web-app-footer.is-visible {
-  height: calc(38px + 1rem) !important;
-}
-.web-app-footer {
-  padding: 0 !important;
-}
-.web-app-footer .btn-primary {
-  margin: 0 !important;
-}
-.web-app-button {
-  height: 54px !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-}

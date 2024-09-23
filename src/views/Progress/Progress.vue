@@ -1,5 +1,8 @@
 <template>
-  <div ref="scrollContainer" class="flex max-h-[100vh] transition overflow-scroll flex-col p-4 gap-4 w-full  min-w-[345px]">
+  <div
+    ref="scrollContainer"
+    class="flex max-h-[100vh] transition overflow-scroll flex-col p-4 gap-4 w-full min-w-[345px]"
+  >
     <div
       class="dialog_card w-full rounded-[6px] p-2 text-left flex flex-col gap-1"
       :class="[
@@ -116,7 +119,7 @@
 
 <script setup>
 import { useUserStore } from "@/stores/useUserStore.js";
-import {nextTick, onMounted, ref} from "vue";
+import { nextTick, onMounted, ref } from "vue";
 const userStore = useUserStore();
 const parameters = ref([
   "Участников: 1",
@@ -250,6 +253,9 @@ onMounted(() => {
   webapp.BackButton.onClick(() => {
     router.go(-1);
   });
+  window.addEventListener("touchmove", {
+    passive: false,
+  });
 
   allItems.forEach((item, index) => {
     setTimeout(() => {
@@ -259,13 +265,12 @@ onMounted(() => {
         if (scrollContainer.value) {
           scrollContainer.value.scrollTo({
             top: scrollContainer.value.scrollHeight,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       });
     }, index * 600);
   });
 });
-
 </script>
 <style scoped></style>
