@@ -3,23 +3,30 @@
     :class="[
       'flex justify-between  items-center p-2 gap-2 rounded-[4px] cursor-pointer',
       userStore.colorScheme === 'light' ? 'bg-white' : 'bg-[#32334B]',
-      isDisable ? 'opacity-60' : 'opacity-100'
+      isDisable ? 'opacity-60' : 'opacity-100',
     ]"
   >
-    <img :src="selectedImage" draggable="false" alt="" class="w-[40px] h-[40px]" />
-    <div class="flex flex-col justify-center gap-1">
-      <p
-        :class="[
-          'text-[14px]  min-w-[200px] leading-[16px] font-medium font-gilroy',
-          userStore.colorScheme === 'light'
-            ? 'text-[#737E87]'
-            : 'text-[#B0B3C5]',
-        ]"
-        v-html="title"
+    <div class="flex items-center gap-2">
+      <img
+        :src="selectedImage"
+        draggable="false"
+        alt=""
+        class="w-[40px] h-[40px]"
       />
+      <div class="flex flex-col justify-center gap-1">
+        <p
+          :class="[
+            'text-[14px]  min-w-[200px] leading-[16px] font-medium font-gilroy',
+            userStore.colorScheme === 'light'
+              ? 'text-[#737E87]'
+              : 'text-[#B0B3C5]',
+          ]"
+          v-html="title"
+        />
+      </div>
     </div>
     <img
-      :src="isDisable ?  uncheck : check"
+      :src="isDisable ? uncheck : check"
       alt=""
       class="w-[20px] h-[20px] mr-4"
     />
@@ -45,7 +52,14 @@ const props = defineProps({
   isDisable: Boolean,
 });
 
-const images = { light_phone, light_money, light_telegram ,  dark_phone, dark_money, dark_telegram  };
+const images = {
+  light_phone,
+  light_money,
+  light_telegram,
+  dark_phone,
+  dark_money,
+  dark_telegram,
+};
 const selectedImage = computed(() => images[props.image]);
 </script>
 
