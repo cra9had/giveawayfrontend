@@ -3,14 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  -webkit-tap-highlight-color: transparent;
-  scrollbar-width: none;
-}
+/*:root {*/
+/*  -webkit-tap-highlight-color: transparent;*/
+/*  scrollbar-width: none;*/
+/*}*/
 
-::-webkit-scrollbar {
-  display: none;
-}
+/*::-webkit-scrollbar {*/
+/*  display: none;*/
+/*}*/
 
 /*::-webkit-scrollbar {*/
 /*  width: 10px;*/
