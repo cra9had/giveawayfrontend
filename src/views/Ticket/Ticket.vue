@@ -42,6 +42,9 @@ onMounted(() => {
   });
   webapp.MainButton.hide();
   document.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("touchmove", {
+    passive: false,
+  });
 });
 
 onUnmounted(() => {
