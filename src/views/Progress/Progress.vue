@@ -259,14 +259,14 @@ onMounted(() => {
     setTimeout(() => {
       visibleItems.value.push({ ...item, visible: true });
 
-      nextTick(() => {
-        if (scrollContainer.value) {
-          scrollContainer.value.scrollTo({
-            top: scrollContainer.value.scrollHeight,
-            behavior: "smooth",
-          });
-        }
-      });
+      // nextTick(() => {
+      //   if (scrollContainer.value) {
+      //     scrollContainer.value.scrollTo({
+      //       top: scrollContainer.value.scrollHeight,
+      //       behavior: "smooth",
+      //     });
+      //   }
+      // });
     }, index * 600);
   });
 });
