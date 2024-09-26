@@ -80,7 +80,7 @@
       </p>
       <div class="dialog_card w-full text-left flex flex-col gap-1" ref="cards">
         <transition-group
-          name="slide-top"
+          name="slide-right"
           tag="div"
           class="flex flex-col gap-1"
         >
@@ -255,7 +255,6 @@ onMounted(() => {
     router.go(-1);
   });
 
-
   allItems.forEach((item, index) => {
     setTimeout(() => {
       visibleItems.value.push({ ...item, visible: true });
@@ -272,4 +271,4 @@ onMounted(() => {
   });
 });
 </script>
-<style scoped></style>
+<style></style>
