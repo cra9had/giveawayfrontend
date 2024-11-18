@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col items-center justify-center gap-1">
     <p
-      v-if="time"
+      v-if="time && !isGreen"
       class="font-gilroy font-bold text-[18px] text-center text-orange_color"
     >
       {{ formattedTime }}
@@ -38,10 +38,6 @@ import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useUserStore } from "@/stores/useUserStore.js";
 const userStore = useUserStore();
 const props = defineProps({
-  time: {
-    type: String,
-    required: false,
-  },
   text: {
     type: String,
     required: false,
@@ -57,6 +53,7 @@ const props = defineProps({
 });
 
 const remainingSeconds = ref(0);
+const time = userStore.giveaway.time_remaining
 
 const parseTime = (timeString) => {
   const parts = timeString.split(":").map(Number);
@@ -81,9 +78,9 @@ const formatTime = (totalSeconds) => {
   if (hours > 0) {
     return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   } else if (minutes > 0) {
-    return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    return `00:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   } else {
-    return `${seconds.toString().padStart(2, "0")}`;
+    return `00:00${seconds.toString().padStart(2, "0")}`;
   }
 };
 
@@ -92,8 +89,8 @@ const formattedTime = computed(() => formatTime(remainingSeconds.value));
 let intervalId;
 
 const startCounter = () => {
-  if (props.time) {
-    remainingSeconds.value = parseTime(props.time);
+  if (time) {
+    remainingSeconds.value = parseTime(time);
     intervalId = setInterval(() => {
       if (remainingSeconds.value > 0) {
         remainingSeconds.value--;
@@ -105,6 +102,7 @@ const startCounter = () => {
 };
 
 onMounted(() => {
+
   startCounter();
 });
 

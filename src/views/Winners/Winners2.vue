@@ -12,12 +12,30 @@ import WinnerCard from "@/components/Winners/WinnerCard.vue";
 import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
-
+const giveaway = userStore.giveaway
 const handleKeyDown = (event) => {
   if (event.key === "Escape") {
     isOpen.value = false;
   }
 };
+
+function getDescription () {
+  const descriptions = []
+  console.log(giveaway.tickets)
+  this.giveaway.tickets.forEach(function (ticket, index, array){
+    console.log(ticket)
+    if (ticket.is_winner) {
+      descriptions.push(`
+    Поздравляем! Вы заняли ${ticket.position} место в розыгрыше: <b><span class=''>${giveaway.title}</span></b>, <br/>
+    ваш выигрышный билет <b><span class='font-uppercase'>«${ticket.number_ticket}»</span></b>.
+    Для получения приза свяжитесь с администратором розыгрыша:
+  `)
+
+    }
+  })
+  return descriptions.join('\n');
+
+}
 
 const webapp = window.Telegram.WebApp;
 const router = useRouter();
@@ -42,18 +60,14 @@ onUnmounted(() => {
     <Hero
       title="Вы победили в розыгрыше!"
       :image="userStore.colorScheme === 'light' ? 'light_prize' : 'dark_prize'"
-      :description="`
-    Поздравляем! Вы заняли 1 место в розыгрыше: <b><span class=''> Название «Розыгрыша»</span></b>, <br/>
-    ваш выигрышный билет <b><span class='font-uppercase'>«1HL9R3»</span></b>.
-    Для получения приза свяжитесь с администратором розыгрыша:
-  `"
+      :description="getDescription()"
     />
     <div
       class="cup-title text-[16px] font-bold font-gilroy leading-[19px] text-center"
     >
       Loto Club
     </div>
-    <Counter startDate="03.09.2024, 20:22" isGreen="Завершился" />
+    <Counter :startDate="giveaway.end_datetime" isGreen="Завершился" />
     <div class="flex items-center justify-center">
       <Button colorScheme="light" title="Как выбирались победители" />
     </div>
@@ -71,9 +85,11 @@ onUnmounted(() => {
       <div class="winners_card flex flex-col gap-1">
         <WinnerCard
           :userImage="image"
+          v-for="winner in giveaway.winners_tickets"
+
           username="Nik@..."
-          title="Билет: <b>«1uL8y4»</b>"
-          :id="9999"
+          :title="`Билет: <b>«${winner.number_ticket}»</b>`"
+          :id="winner.position"
         />
       </div>
     </div>

@@ -6,9 +6,11 @@ import Button from "../../components/Button/Button.vue";
 import Counter from "@/components/Counter/Counter.vue";
 import Ticket from "@/components/Hero/Ticket.vue";
 import ShareDialog from "@/components/Hero/ShareDialog.vue";
+import { useUserStore } from "@/stores/useUserStore.js";
+const userStore = useUserStore();
 
 const isOpen = ref(false);
-
+const giveaway = userStore.giveaway;
 
 const openDialog = () => {
   isOpen.value = true;
@@ -55,10 +57,12 @@ onUnmounted(() => {
         title="Пригласить друзей"
         description="<p> Получи дополнительный билет, пригласив друзей! </p>"
       />
+
       <Ticket
         image="ticket"
-        title="Билет: 1HL9R3"
-        description="<p> Получен: <strong>03.09.2021, 14:20 </strong> </p>"
+        v-for="ticket in giveaway.tickets"
+        :title="`Билет: ${ticket.number_ticket}`"
+        :description="`<p> Получен: <strong>${ticket.create_date} </strong> </p>`"
         link="ticket"
       />
     </div>

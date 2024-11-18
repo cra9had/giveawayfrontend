@@ -1,3 +1,4 @@
+// stores/userStore.js
 import { ref, onMounted, onUnmounted } from "vue";
 import { defineStore } from "pinia";
 
@@ -5,16 +6,22 @@ const webapp = window.Telegram.WebApp;
 
 export const useUserStore = defineStore("userStore", () => {
   const colorScheme = ref("");
+  const conditions = ref(null);
+  const giveaway = ref(null);
+
+  const setGiveaway = (newGiveaway) => {
+    giveaway.value = newGiveaway;
+  };
+
+  const setConditions = (newConditions) => {
+    conditions.value = newConditions;
+  };
 
   const getColorScheme = () => {
     let theme = getComputedStyle(document.documentElement)
-      .getPropertyValue("--tg-color-scheme")
-      .trim();
-    if (!theme) {
-      return "light";
-    } else {
-      return theme;
-    }
+        .getPropertyValue("--tg-color-scheme")
+        .trim();
+    return theme || "light";
   };
 
   const handleColorSchemeChange = () => {
@@ -56,5 +63,15 @@ export const useUserStore = defineStore("userStore", () => {
 
   return {
     colorScheme,
+    conditions,
+    giveaway,
+    setConditions,
+    setGiveaway,
   };
+}, {
+  persist: {
+    // Define what you want to persist; by default, all data is persisted
+    key: 'userStore', // optional custom storage key
+    paths: ['colorScheme', 'conditions', 'giveaway'], // specify which properties to persist
+  },
 });

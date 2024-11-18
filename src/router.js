@@ -19,9 +19,10 @@ export default createRouter({
       name: "TICKET",
     },
     {
-      path: "/checking",
+      path: "/checking/:id(\\d+)", // The regex ensures that 'id' is an integer
       component: () => import("./views/Checking/Checking.vue"),
-      name: "CHECKING",
+      name: "checking",
+      props: true // This allows passing the route param 'id' as a prop to the component
     },
     {
       path: "/condition",

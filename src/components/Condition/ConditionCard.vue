@@ -6,7 +6,7 @@
       isDisable ? 'opacity-60' : 'opacity-100',
     ]"
   >
-    <div class="flex items-center gap-2">
+    <div class="flex itemscenter gap-2">
       <img
         :src="selectedImage"
         draggable="false"

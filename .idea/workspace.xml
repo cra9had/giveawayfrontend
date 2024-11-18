@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="fee350f6-5ab6-4088-b0e4-18f6f792b122" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Condition/ConditionCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Condition/ConditionCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Counter/Counter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Counter/Counter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/useUserStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/useUserStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Checking/Checking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Checking/Checking.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Condition/ToDoCondition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Condition/ToDoCondition.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Index/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Winners/Winners2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +37,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2mFho3byN7Rgt9JdFJ0kb4HV0N3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,7 +51,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/freelancing/loto_club/src/assets/lottie&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/khaiam/PycharmProjects/GiveAwayBot/frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -45,6 +60,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Program Files\\nodejs\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -57,6 +73,13 @@
       <recent name="D:\projects\freelancing\loto_club\src\assets\icons\condition" />
       <recent name="D:\projects\freelancing\loto_club\src\views\Condition" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,6 +99,10 @@
       <workItem from="1727106351928" duration="1506000" />
       <workItem from="1727201977617" duration="11000" />
       <workItem from="1727277438136" duration="604000" />
+      <workItem from="1729744887073" duration="16780000" />
+      <workItem from="1730367748116" duration="49000" />
+      <workItem from="1730367800221" duration="19800000" />
+      <workItem from="1730890261508" duration="48668000" />
     </task>
     <servers />
   </component>
@@ -90,11 +117,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/Index/Index.vue</url>
-          <line>59</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Condition/Condition.vue</url>
           <line>14</line>
           <option name="timeStamp" value="8" />
@@ -103,11 +125,6 @@
           <url>file://$PROJECT_DIR$/src/components/Counter/Counter.vue</url>
           <line>2</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Counter/Counter.vue</url>
-          <line>44</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Hero/Ticket.vue</url>
