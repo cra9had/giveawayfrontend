@@ -11,7 +11,7 @@ export default createRouter({
     {
       path: "/",
       component: () => import("./views/Index/Index.vue"),
-      name: "FIRST",
+      name: "index",
     },
     {
       path: "/ticket",

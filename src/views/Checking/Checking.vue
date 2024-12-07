@@ -39,7 +39,6 @@ const initDataUnsafe =  {
   "auth_date": "1728301999",
   "hash": "a03e5b3dc5ebc4843e54cd19057d2c722a4456e7319b766def6d87a46988eca2"
 }
-alert(JSON.stringify(webapp.initDataUnsafe.user))
 
 const router = useRouter();
 const isLoading = ref(true);
@@ -136,16 +135,26 @@ onMounted(() => {
 
   const init = async () => {
     await authorizeUser();
-    const giveaway = await checkGiveaway();
+    let giveaway = await checkGiveaway();
     userStore.setGiveaway(giveaway);
     if (!giveaway.already_joined && giveaway.status === 'in_progress') {
       const conditions = await getTicket();
+      giveaway = await checkGiveaway();
+      userStore.setGiveaway(giveaway);
       if (conditions.status === false) {
         userStore.setConditions(conditions); // обновление conditions
         await router.push({
           name: 'todo-condition',  // Имя вашего целевого маршрута
         });
+      } else {
+        await router.push({
+          name: 'index',
+        })
       }
+    } else if (giveaway.already_joined && giveaway.status === 'in_progress' ) {
+      await router.push({
+        name: 'index',
+      })
     } else if (giveaway.already_joined && giveaway.status === 'end') {
         if (giveaway.is_winner) {
           await router.push({

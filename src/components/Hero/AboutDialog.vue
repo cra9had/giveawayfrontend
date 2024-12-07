@@ -39,7 +39,7 @@
               : 'text-[#fff]',
           ]"
         >
-          .....
+          {{giveaway.description}}
         </p>
       </div>
       <main
@@ -89,14 +89,15 @@
 import { ref } from "vue";
 import { useUserStore } from "@/stores/useUserStore.js";
 const userStore = useUserStore();
+const giveaway = userStore.giveaway
 const emit = defineEmits(["close"]);
 const closeDialog = () => {
   emit("close");
 };
 const parameters = ref([
-  "Участников: 1",
-  "Призовых мест: 1",
-  "Дата розыгрыша: <b>03.09.2024, 20:22 </b>",
+  `Участников: ${giveaway.total_participants}`,
+  `Призовых мест: ${giveaway.winners_count}`,
+  `Дата розыгрыша: <b>${giveaway.end_datetime}</b>`,
 ]);
 </script>
 <style></style>

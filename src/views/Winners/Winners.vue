@@ -75,16 +75,12 @@ onUnmounted(() => {
       </p>
       <div class="winners_card flex flex-col gap-1">
         <WinnerCard
-          :userImage="image"
-          username="Nik@..."
-          title="Билет: <b>«1uL8y4»</b>"
-          :id="9999"
-        />
-        <WinnerCard
-          :userImage="image"
-          username="next2@..."
-          title="Билет: <b>«1uL8y4»</b>"
-          :id="1"
+            :userImage="image"
+            v-for="winner in giveaway.winners_tickets"
+
+            :username="`@${winner.participant_username}`"
+            :title="`Билет: <b>«${winner.number_ticket}»</b>`"
+            :id="winner.position"
         />
       </div>
     </div>

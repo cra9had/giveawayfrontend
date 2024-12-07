@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col items-center justify-center gap-1">
     <p
-      v-if="time && !isGreen"
+      v-if="endTime && !isGreen"
       class="font-gilroy font-bold text-[18px] text-center text-orange_color"
     >
       {{ formattedTime }}
@@ -36,7 +36,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useUserStore } from "@/stores/useUserStore.js";
+
 const userStore = useUserStore();
+
 const props = defineProps({
   text: {
     type: String,
@@ -53,56 +55,45 @@ const props = defineProps({
 });
 
 const remainingSeconds = ref(0);
-const time = userStore.giveaway.time_remaining
 
-const parseTime = (timeString) => {
-  const parts = timeString.split(":").map(Number);
-  let totalSeconds = 0;
+// Get the Unix time of when the countdown ends from the user store
+const endTime = userStore.giveaway.time_remaining;
 
-  if (parts.length === 3) {
-    totalSeconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
-  } else if (parts.length === 2) {
-    totalSeconds = parts[0] * 60 + parts[1];
-  } else if (parts.length === 1) {
-    totalSeconds = parts[0];
-  }
-
-  return isNaN(totalSeconds) ? 0 : totalSeconds;
-};
-
+// Format time into "hh:mm:ss"
 const formatTime = (totalSeconds) => {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
 
-  if (hours > 0) {
-    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-  } else if (minutes > 0) {
-    return `00:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-  } else {
-    return `00:00${seconds.toString().padStart(2, "0")}`;
-  }
+  return `${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
 
+// Computed property to provide formatted remaining time
 const formattedTime = computed(() => formatTime(remainingSeconds.value));
 
 let intervalId;
 
-const startCounter = () => {
-  if (time) {
-    remainingSeconds.value = parseTime(time);
-    intervalId = setInterval(() => {
-      if (remainingSeconds.value > 0) {
-        remainingSeconds.value--;
-      } else {
-        clearInterval(intervalId);
-      }
-    }, 1000);
-  }
+// Function to calculate remaining time
+const calculateRemainingTime = () => {
+  const currentTime = Math.floor(Date.now() / 1000); // Current Unix timestamp in seconds
+  remainingSeconds.value = Math.max(0, endTime - currentTime);
 };
 
-onMounted(() => {
+// Start the countdown
+const startCounter = () => {
+  calculateRemainingTime(); // Set the initial value immediately
+  intervalId = setInterval(() => {
+    calculateRemainingTime();
+    if (remainingSeconds.value === 0) {
+      clearInterval(intervalId);
+    }
+  }, 1000);
+};
 
+// Lifecycle hooks
+onMounted(() => {
   startCounter();
 });
 
@@ -112,5 +103,7 @@ onUnmounted(() => {
   }
 });
 </script>
+
+
 
 <style scoped></style>

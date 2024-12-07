@@ -87,7 +87,7 @@ onUnmounted(() => {
           :userImage="image"
           v-for="winner in giveaway.winners_tickets"
 
-          username="Nik@..."
+          :username="`@${winner.participant_username}`"
           :title="`Билет: <b>«${winner.number_ticket}»</b>`"
           :id="winner.position"
         />

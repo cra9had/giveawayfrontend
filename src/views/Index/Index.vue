@@ -7,13 +7,20 @@ import Counter from "@/components/Counter/Counter.vue";
 import Ticket from "@/components/Hero/Ticket.vue";
 import ShareDialog from "@/components/Hero/ShareDialog.vue";
 import { useUserStore } from "@/stores/useUserStore.js";
+import AboutDialog from "@/components/Hero/AboutDialog.vue";
 const userStore = useUserStore();
 
 const isOpen = ref(false);
+const aboutDialogOpen = ref(false);
 const giveaway = userStore.giveaway;
 
 const openDialog = () => {
   isOpen.value = true;
+};
+
+
+const openAboutDialog = () => {
+  aboutDialogOpen.value = true;
 };
 
 const closeDialog = (event) => {
@@ -25,6 +32,7 @@ const closeDialog = (event) => {
 const handleKeyDown = (event) => {
   if (event.key === "Escape") {
     isOpen.value = false;
+    aboutDialogOpen.value = false;
   }
 };
 const webapp = window.Telegram.WebApp;
@@ -49,7 +57,7 @@ onUnmounted(() => {
       description="Не отписывайтесь от каналов до окончания розыгрыша!"
     />
     <Counter time="06:01:52" text="До завершения" />
-    <Button colorScheme="light" title="Подробнее о розыгрыше" />
+    <Button colorScheme="light" title="Подробнее о розыгрыше" @click="openAboutDialog" />
     <div class="tickets flex flex-col justify-center gap-1">
       <Ticket
         @click="openDialog"
@@ -67,7 +75,17 @@ onUnmounted(() => {
       />
     </div>
   </main>
+
   <Teleport to="body">
+    <transition name="slide-top">
+      <div
+          v-if="aboutDialogOpen"
+          class="modal-overlay fixed inset-0 bg-[#17212BCC] flex justify-center items-end z-50"
+          @click="closeAboutDialog"
+      >
+        <AboutDialog @close="aboutDialogOpen = false" />
+      </div>
+    </transition>
     <transition name="slide-top">
       <div
         v-if="isOpen"
