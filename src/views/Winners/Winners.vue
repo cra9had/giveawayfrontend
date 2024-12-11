@@ -23,6 +23,8 @@ const closeDialog = (event) => {
   }
 };
 
+
+
 const handleKeyDown = (event) => {
   if (event.key === "Escape") {
     isOpen.value = false;
@@ -30,6 +32,13 @@ const handleKeyDown = (event) => {
 };
 const webapp = window.Telegram.WebApp;
 const router = useRouter();
+
+const GoToProgress = () => {
+  router.push(
+      {name: 'progress'}
+  )
+}
+
 onMounted(() => {
   webapp.BackButton.show();
   webapp.BackButton.onClick(() => {
@@ -60,7 +69,7 @@ onUnmounted(() => {
     </div>
     <Counter startDate="03.09.2024, 20:22" isGreen="Завершился" />
     <div class="flex items-center justify-center">
-      <Button colorScheme="light" title="Как выбирались победители" />
+      <Button colorScheme="light" title="Как выбирались победители" @click="GoToProgress"/>
     </div>
     <div class="winners">
       <p

@@ -13,7 +13,7 @@
 <script setup>
 import Hero from "@/components/Hero/Hero.vue";
 import { useUserStore } from "@/stores/useUserStore.js";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
 const props = defineProps({
@@ -25,6 +25,12 @@ const props = defineProps({
 
 const userStore = useUserStore();
 const webapp = window.Telegram.WebApp;
+
+const id = computed(() => {
+  return webapp.initDataUnsafe.start_param
+      ? Number(webapp.initDataUnsafe.start_param) // Use `start_param` if available
+      : props.id; // Otherwise, use the provided `id`
+});
 const initDataUnsafe =  {
   "query_id": "AAFRCPZDAAAAAFEI9kP97ZBf",
   "user": {
@@ -73,7 +79,7 @@ const checkGiveaway = async () => {
     const token = localStorage.getItem('token');
     if (!token) throw new Error('No token found');
 
-    const response = await fetch(apiUrl + `/api/giveaways/${props.id}/`, {
+    const response = await fetch(apiUrl + `/api/giveaways/${id.value}/`, {
       method: 'GET',
       headers: {
         'Authorization': `Token ${token}`,
@@ -101,7 +107,7 @@ const getTicket = async () => {
     const token = localStorage.getItem('token');
     if (!token) throw new Error('No token found');
 
-    const response = await fetch(apiUrl + `/api/tickets/join/${props.id}/`, {
+    const response = await fetch(apiUrl + `/api/tickets/join/${id.value}/`, {
       method: 'POST',
       headers: {
         'Authorization': `Token ${token}`,

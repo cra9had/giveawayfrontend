@@ -71,7 +71,6 @@ onUnmounted(() => {
         v-for="ticket in giveaway.tickets"
         :title="`Билет: ${ticket.number_ticket}`"
         :description="`<p> Получен: <strong>${ticket.create_date} </strong> </p>`"
-        link="ticket"
       />
     </div>
   </main>
