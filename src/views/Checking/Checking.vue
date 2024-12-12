@@ -25,20 +25,21 @@ const props = defineProps({
 
 const userStore = useUserStore();
 const webapp = window.Telegram.WebApp;
-const initDataUnsafe =  {
-  "query_id": "AAFRCPZDAAAAAFEI9kP97ZBf",
-  "user": {
-    "id": 1140197457,
-    "first_name": "Khaiam",
-    "last_name": "",
-    "username": "khaiam_aliev",
-    "language_code": "ru",
-    "is_premium": true,
-    "allows_write_to_pm": true
-  },
-  "auth_date": "1728301999",
-  "hash": "a03e5b3dc5ebc4843e54cd19057d2c722a4456e7319b766def6d87a46988eca2"
-}
+// const initDataUnsafe =  {
+//   "query_id": "AAFRCPZDAAAAAFEI9kP97ZBf",
+//   "user": {
+//     "id": 1140197457,
+//     "first_name": "Khaiam",
+//     "last_name": "",
+//     "username": "khaiam_aliev",
+//     "language_code": "ru",
+//     "is_premium": true,
+//     "allows_write_to_pm": true
+//   },
+//   "auth_date": "1728301999",
+//   "hash": "a03e5b3dc5ebc4843e54cd19057d2c722a4456e7319b766def6d87a46988eca2"
+// }
+const initDataUnsafe = webapp.initDataUnsafe
 alert(JSON.stringify(webapp.initDataUnsafe.user))
 
 const router = useRouter();
