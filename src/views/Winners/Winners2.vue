@@ -22,7 +22,7 @@ const handleKeyDown = (event) => {
 function getDescription () {
   const descriptions = []
   console.log(giveaway.tickets)
-  this.giveaway.tickets.forEach(function (ticket, index, array){
+  giveaway.tickets.forEach(function (ticket, index, array){
     console.log(ticket)
     if (ticket.is_winner) {
       descriptions.push(`
