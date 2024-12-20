@@ -12,6 +12,7 @@ import WinnerCard from "@/components/Winners/WinnerCard.vue";
 import { useRouter } from "vue-router";
 
 const userStore = useUserStore();
+const giveaway = userStore.giveaway
 
 const openDialog = () => {
   isOpen.value = true;

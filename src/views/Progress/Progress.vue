@@ -27,7 +27,7 @@
             : 'text-[#fff]',
         ]"
       >
-        .....
+        {{ giveaway.description }}
       </p>
     </div>
     <div class="dialog_card">
